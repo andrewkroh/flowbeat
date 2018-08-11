@@ -1,0 +1,11 @@
+sudo: false
+language: go
+go:
+- '1.10.x'
+
+go_import_path: github.com/andrewkroh/flowbeat
+
+script:
+- find . -name '*.go' | grep -v vendor | xargs gofmt -l | read && echo "Code differs from gofmt's style. Run 'gofmt -w .'" 1>&2 && exit 1 || true
+- go test ./...
+- go build

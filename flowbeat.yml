@@ -1,0 +1,24 @@
+flowbeat:
+  # UDP address to listen on for Netflow packets.
+  #netflow.address: ':2055'
+
+  # Size of the socket read buffer.
+  #netflow.read_buffer: 65536
+
+processors:
+  # DNS reverse lookup on IPs in flow event.
+  - dns.lookup:
+      - type: reverse
+        fields:
+          device.ip: device.domain
+          source.ip: source.domain
+          destination.ip: destination.domain
+
+output.elasticsearch:
+  hosts: ["localhost:9200"]
+
+#output.logstash:
+  #hosts: ["localhost:5044"]
+
+# Provides metrics at /stats.
+http.host: localhost:5066

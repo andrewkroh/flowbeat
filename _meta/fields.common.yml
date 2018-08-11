@@ -1,0 +1,311 @@
+- key: flowbeat
+  title: flowbeat
+  description:
+  fields:
+    - name: flow.duration
+      type: long
+      format: duration
+      input_format: nanoseconds
+      description: Duration of the flow up to this flow record.
+    - name: flow.bytes
+      type: long
+      format: bytes
+      description: >
+        The number of bytes since the previous report (if any) in incoming
+        packets for this Flow at the Observation Point. The number of bytes
+        includes IP header(s) and IP payload. 
+    - name: flow.packets
+      type: long
+      description: >
+        The number of incoming packets since the previous report (if any)
+        for this Flow at the Observation Point. 
+    - name: flow.id
+      type: keyword
+    - name: flow.start_time
+      type: date
+      description: Time the flow started.
+    - name: flow.last_time
+      type: date
+      description: Time of the last packet in this flow
+    - name: flow.sequence_num
+      type: long
+      description: Sequence number of the flow report.
+
+- key: ecs
+  title: Elastic Common Schema
+  description: Common fields from the Elastic Common Schema (ECS).
+  fields:
+    - name: source
+      title: Source
+      type: group
+      description: >
+        Source fields describe details about the source of the event.
+      fields:
+        - name: ip
+          type: ip
+          description: >
+            IP address of the source.
+
+            Can be one or multiple IPv4 or IPv6 addresses.
+        - name: hostname
+          type: keyword
+          description: >
+            Hostname of the source.
+        - name: port
+          type: long
+          phase: 1
+          description: >
+            Port of the source.
+        - name: mac
+          type: keyword
+          phase: 1
+          description: >
+            MAC address of the source.
+        - name: domain
+          type: keyword
+          phase: 1
+          description: >
+            Source domain.
+        - name: subdomain
+          type: keyword
+          phase: 1
+          description: >
+            Source subdomain.
+        - name: geo
+          title: Geo
+          type: group
+          description: >
+            Geo fields can carry data about a specific location related to an event
+            or geo information for an IP field.
+          fields:
+            - name: continent_name
+              type: keyword
+              description: >
+                Name of the continent.
+            - name: country_iso_code
+              type: keyword
+              description: >
+                Country ISO code.
+            - name: location
+              type: geo_point
+              description: >
+                Longitude and latitude.
+            - name: region_name
+              type: keyword
+              description: >
+                Region name.
+            - name: city_name
+              type: keyword
+              description: >
+                City name.
+            - name: asn
+              type: long
+              description: >
+                Autonomous system number
+            - name: as_org
+              type: keyword
+              description: >
+                Autonomous system organization name.
+
+    - name: destination
+      title: Destination
+      type: group
+      description: >
+        Destination fields describe details about the destination of a
+        packet/event.
+      fields:
+        - name: ip
+          type: ip
+          description: >
+            IP address of the destination.
+            Can be one or multiple IPv4 or IPv6 addresses.
+        - name: hostname
+          type: keyword
+          description: >
+            Hostname of the destination.
+        - name: port
+          type: long
+          description: >
+            Port of the destination.
+        - name: mac
+          type: keyword
+          description: >
+            MAC address of the destination.
+        - name: domain
+          type: keyword
+          phase: 1
+          description: >
+            Destination domain.
+        - name: subdomain
+          type: keyword
+          phase: 1
+          description: >
+            Destination subdomain.
+        - name: geo
+          title: Geo
+          type: group
+          description: >
+            Geo fields can carry data about a specific location related to an event
+            or geo information for an IP field.
+          fields:
+            - name: continent_name
+              type: keyword
+              description: >
+                Name of the continent.
+            - name: country_iso_code
+              type: keyword
+              description: >
+                Country ISO code.
+            - name: location
+              type: geo_point
+              description: >
+                Longitude and latitude.
+            - name: region_name
+              type: keyword
+              description: >
+                Region name.
+            - name: city_name
+              type: keyword
+              description: >
+                City name.
+            - name: asn
+              type: long
+              description: >
+                Autonomous system number
+            - name: as_org
+              type: keyword
+              description: >
+                Autonomous system organization name.
+
+    - name: device
+      title: Device
+      type: group
+      description: >
+        Device fields are used to provide additional information about the device
+        that is the source of the information. This could be a firewall, network device, etc.
+      fields:
+        - name: mac
+          type: keyword
+          description: >
+            MAC address of the device
+        - name: ip
+          type: ip
+          description: >
+            IP address of the device.
+        - name: hostname
+          type: keyword
+          description: >
+            Hostname of the device.
+        - name: vendor
+          type: text
+          description: >
+            Device vendor information.
+        - name: version
+          type: keyword
+          description: >
+            Device version.
+        - name: serial_number
+          type: keyword
+          description: >
+            Device serial number.
+        - name: timezone.offset.sec
+          type: long
+          description: >
+            Timezone offset of the host in seconds.
+            Number of seconds relative to UTC. If the offset is -01:30 the
+            value will be -5400.
+          example: -5400
+        - name: type
+          type: keyword
+          description: >
+            The type of the device the data is coming from.
+            There is no predefined list of device types. Some examples are
+            `endpoint`, `firewall`, `ids`, `ips`, `proxy`.
+          example: firewall
+
+    - name: network
+      title: Network
+      type: group
+      description: >
+        Fields related to network data.
+      fields:
+        - name: protocol
+          type: keyword
+          description: >
+            Network protocol name.
+          example: http
+        - name: direction
+          type: keyword
+          description: >
+            Direction of the network traffic.
+            Recommended values are:
+              * inbound
+              * outbound
+              * unknown
+          example: inbound
+
+        - name: forwarded_ip
+          type: ip
+          description: >
+            Host IP address when the source IP address is the proxy.
+          example: 192.1.1.2
+
+        # Metrics
+        - name: inbound.bytes
+          type: long
+          description: >
+            Network inbound bytes.
+          example: 184
+        - name: inbound.packets
+          type: long
+          description: >
+            Network inbound packets.
+          example: 12
+        - name: outbound.bytes
+          type: long
+          description: >
+            Network outbound bytes.
+          example: 184
+        - name: outbound.packets
+          type: long
+          description: >
+            Network outbound packets.
+          example: 12
+        - name: total.bytes
+          type: long
+          description: >
+            Network total bytes. The sum of inbound.bytes + outbound.bytes.
+          example: 368
+        - name: total.packets
+          type: long
+          description: >
+            Network outbound packets. The sum of inbound.packets + outbound.packets
+          example: 24
+
+    - name: geo
+      title: Geo
+      type: group
+      description: >
+        Geo fields can carry data about a specific location related to an event
+        or geo information for an IP field.
+      fields:
+        - name: continent_name
+          type: keyword
+          description: >
+            Name of the continent.
+        - name: country_iso_code
+          type: keyword
+          description: >
+            Country ISO code.
+        - name: location
+          type: geo_point
+          description: >
+            Longitude and latitude.
+        - name: region_name
+          type: keyword
+          description: >
+            Region name.
+        - name: city_name
+          type: keyword
+          description: >
+            City name.

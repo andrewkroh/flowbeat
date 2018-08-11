@@ -1,0 +1,531 @@
+- key: flowbeat
+  title: flowbeat
+  description:
+  fields:
+    - name: flow.duration
+      type: long
+      format: duration
+      input_format: nanoseconds
+      description: Duration of the flow up to this flow record.
+    - name: flow.bytes
+      type: long
+      format: bytes
+      description: >
+        The number of bytes since the previous report (if any) in incoming
+        packets for this Flow at the Observation Point. The number of bytes
+        includes IP header(s) and IP payload. 
+    - name: flow.packets
+      type: long
+      description: >
+        The number of incoming packets since the previous report (if any)
+        for this Flow at the Observation Point. 
+    - name: flow.id
+      type: keyword
+    - name: flow.start_time
+      type: date
+      description: Time the flow started.
+    - name: flow.last_time
+      type: date
+      description: Time of the last packet in this flow
+    - name: flow.sequence_num
+      type: long
+      description: Sequence number of the flow report.
+
+- key: ecs
+  title: Elastic Common Schema
+  description: Common fields from the Elastic Common Schema (ECS).
+  fields:
+    - name: source
+      title: Source
+      type: group
+      description: >
+        Source fields describe details about the source of the event.
+      fields:
+        - name: ip
+          type: ip
+          description: >
+            IP address of the source.
+
+            Can be one or multiple IPv4 or IPv6 addresses.
+        - name: hostname
+          type: keyword
+          description: >
+            Hostname of the source.
+        - name: port
+          type: long
+          phase: 1
+          description: >
+            Port of the source.
+        - name: mac
+          type: keyword
+          phase: 1
+          description: >
+            MAC address of the source.
+        - name: domain
+          type: keyword
+          phase: 1
+          description: >
+            Source domain.
+        - name: subdomain
+          type: keyword
+          phase: 1
+          description: >
+            Source subdomain.
+        - name: geo
+          title: Geo
+          type: group
+          description: >
+            Geo fields can carry data about a specific location related to an event
+            or geo information for an IP field.
+          fields:
+            - name: continent_name
+              type: keyword
+              description: >
+                Name of the continent.
+            - name: country_iso_code
+              type: keyword
+              description: >
+                Country ISO code.
+            - name: location
+              type: geo_point
+              description: >
+                Longitude and latitude.
+            - name: region_name
+              type: keyword
+              description: >
+                Region name.
+            - name: city_name
+              type: keyword
+              description: >
+                City name.
+            - name: asn
+              type: long
+              description: >
+                Autonomous system number
+            - name: as_org
+              type: keyword
+              description: >
+                Autonomous system organization name.
+
+    - name: destination
+      title: Destination
+      type: group
+      description: >
+        Destination fields describe details about the destination of a
+        packet/event.
+      fields:
+        - name: ip
+          type: ip
+          description: >
+            IP address of the destination.
+            Can be one or multiple IPv4 or IPv6 addresses.
+        - name: hostname
+          type: keyword
+          description: >
+            Hostname of the destination.
+        - name: port
+          type: long
+          description: >
+            Port of the destination.
+        - name: mac
+          type: keyword
+          description: >
+            MAC address of the destination.
+        - name: domain
+          type: keyword
+          phase: 1
+          description: >
+            Destination domain.
+        - name: subdomain
+          type: keyword
+          phase: 1
+          description: >
+            Destination subdomain.
+        - name: geo
+          title: Geo
+          type: group
+          description: >
+            Geo fields can carry data about a specific location related to an event
+            or geo information for an IP field.
+          fields:
+            - name: continent_name
+              type: keyword
+              description: >
+                Name of the continent.
+            - name: country_iso_code
+              type: keyword
+              description: >
+                Country ISO code.
+            - name: location
+              type: geo_point
+              description: >
+                Longitude and latitude.
+            - name: region_name
+              type: keyword
+              description: >
+                Region name.
+            - name: city_name
+              type: keyword
+              description: >
+                City name.
+            - name: asn
+              type: long
+              description: >
+                Autonomous system number
+            - name: as_org
+              type: keyword
+              description: >
+                Autonomous system organization name.
+
+    - name: device
+      title: Device
+      type: group
+      description: >
+        Device fields are used to provide additional information about the device
+        that is the source of the information. This could be a firewall, network device, etc.
+      fields:
+        - name: mac
+          type: keyword
+          description: >
+            MAC address of the device
+        - name: ip
+          type: ip
+          description: >
+            IP address of the device.
+        - name: hostname
+          type: keyword
+          description: >
+            Hostname of the device.
+        - name: vendor
+          type: text
+          description: >
+            Device vendor information.
+        - name: version
+          type: keyword
+          description: >
+            Device version.
+        - name: serial_number
+          type: keyword
+          description: >
+            Device serial number.
+        - name: timezone.offset.sec
+          type: long
+          description: >
+            Timezone offset of the host in seconds.
+            Number of seconds relative to UTC. If the offset is -01:30 the
+            value will be -5400.
+          example: -5400
+        - name: type
+          type: keyword
+          description: >
+            The type of the device the data is coming from.
+            There is no predefined list of device types. Some examples are
+            `endpoint`, `firewall`, `ids`, `ips`, `proxy`.
+          example: firewall
+
+    - name: network
+      title: Network
+      type: group
+      description: >
+        Fields related to network data.
+      fields:
+        - name: protocol
+          type: keyword
+          description: >
+            Network protocol name.
+          example: http
+        - name: direction
+          type: keyword
+          description: >
+            Direction of the network traffic.
+            Recommended values are:
+              * inbound
+              * outbound
+              * unknown
+          example: inbound
+
+        - name: forwarded_ip
+          type: ip
+          description: >
+            Host IP address when the source IP address is the proxy.
+          example: 192.1.1.2
+
+        # Metrics
+        - name: inbound.bytes
+          type: long
+          description: >
+            Network inbound bytes.
+          example: 184
+        - name: inbound.packets
+          type: long
+          description: >
+            Network inbound packets.
+          example: 12
+        - name: outbound.bytes
+          type: long
+          description: >
+            Network outbound bytes.
+          example: 184
+        - name: outbound.packets
+          type: long
+          description: >
+            Network outbound packets.
+          example: 12
+        - name: total.bytes
+          type: long
+          description: >
+            Network total bytes. The sum of inbound.bytes + outbound.bytes.
+          example: 368
+        - name: total.packets
+          type: long
+          description: >
+            Network outbound packets. The sum of inbound.packets + outbound.packets
+          example: 24
+
+    - name: geo
+      title: Geo
+      type: group
+      description: >
+        Geo fields can carry data about a specific location related to an event
+        or geo information for an IP field.
+      fields:
+        - name: continent_name
+          type: keyword
+          description: >
+            Name of the continent.
+        - name: country_iso_code
+          type: keyword
+          description: >
+            Country ISO code.
+        - name: location
+          type: geo_point
+          description: >
+            Longitude and latitude.
+        - name: region_name
+          type: keyword
+          description: >
+            Region name.
+        - name: city_name
+          type: keyword
+          description: >
+            City name.
+
+- key: beat
+  title: Beat
+  description: >
+    Contains common beat fields available in all event types.
+  fields:
+
+    - name: beat.name
+      description: >
+        The name of the Beat sending the log messages. If the Beat name is
+        set in the configuration file, then that value is used. If it is not
+        set, the hostname is used. To set the Beat name, use the `name`
+        option in the configuration file.
+    - name: beat.hostname
+      description: >
+        The hostname as returned by the operating system on which the Beat is
+        running.
+    - name: beat.timezone
+      description: >
+        The timezone as returned by the operating system on which the Beat is
+        running.
+    - name: beat.version
+      description: >
+        The version of the beat that generated this event.
+
+    - name: "@timestamp"
+      type: date
+      required: true
+      format: date
+      example: August 26th 2016, 12:35:53.332
+      description: >
+        The timestamp when the event log record was generated.
+
+    - name: tags
+      description: >
+        Arbitrary tags that can be set per Beat and per transaction
+        type.
+
+    - name: fields
+      type: object
+      object_type: keyword
+      description: >
+        Contains user configurable fields.
+
+    - name: error
+      type: group
+      description: >
+        Error fields containing additional info in case of errors.
+      fields:
+        - name: message
+          type: text
+          description: >
+            Error message.
+        - name: code
+          type: long
+          description: >
+            Error code.
+        - name: type
+          type: keyword
+          description: >
+            Error type.
+- key: cloud
+  title: Cloud provider metadata
+  description: >
+    Metadata from cloud providers added by the add_cloud_metadata processor.
+  fields:
+
+    - name: meta.cloud.provider
+      example: ec2
+      description: >
+        Name of the cloud provider. Possible values are ec2, gce, or digitalocean.
+
+    - name: meta.cloud.instance_id
+      description: >
+        Instance ID of the host machine.
+
+    - name: meta.cloud.instance_name
+      description: >
+        Instance name of the host machine.
+
+    - name: meta.cloud.machine_type
+      example: t2.medium
+      description: >
+        Machine type of the host machine.
+
+    - name: meta.cloud.availability_zone
+      example: us-east-1c
+      description: >
+        Availability zone in which this host is running.
+
+    - name: meta.cloud.project_id
+      example: project-x
+      description: >
+        Name of the project in Google Cloud.
+
+    - name: meta.cloud.region
+      description: >
+        Region in which this host is running.
+- key: docker
+  title: Docker
+  description: >
+    Docker stats collected from Docker.
+  short_config: false
+  anchor: docker-processor
+  fields:
+    - name: docker
+      type: group
+      fields:
+        - name: container.id
+          type: keyword
+          description: >
+            Unique container id.
+        - name: container.image
+          type: keyword
+          description: >
+            Name of the image the container was built on.
+        - name: container.name
+          type: keyword
+          description: >
+            Container name.
+        - name: container.labels
+          type: object
+          object_type: keyword
+          description: >
+            Image labels.
+- key: host
+  title: Host
+  description: >
+    Info collected for the host machine.
+  anchor: host-processor
+  fields:
+    - name: host
+      type: group
+      fields:
+        - name: name
+          type: keyword
+          description: >
+            Hostname.
+        - name: id
+          type: keyword
+          description: >
+            Unique host id.
+        - name: architecture
+          type: keyword
+          description: >
+            Host architecture (e.g. x86_64, arm, ppc, mips).
+        - name: os.platform
+          type: keyword
+          description: >
+            OS platform (e.g. centos, ubuntu, windows).
+        - name: os.version
+          type: keyword
+          description: >
+            OS version.
+        - name: os.family
+          type: keyword
+          description: >
+            OS family (e.g. redhat, debian, freebsd, windows).
+        - name: os.kernel
+          type: keyword
+          description: >
+            The operating system's kernel version.
+        - name: ip
+          type: ip
+          description: >
+            List of IP-addresses.
+        - name: mac
+          type: keyword
+          description: >
+            List of hardware-addresses, usually MAC-addresses.
+
+- key: kubernetes
+  title: Kubernetes
+  description: >
+    Kubernetes metadata added by the kubernetes processor
+  short_config: false
+  anchor: kubernetes-processor
+  fields:
+    - name: kubernetes
+      type: group
+      fields:
+        - name: pod.name
+          type: keyword
+          description: >
+            Kubernetes pod name
+
+        - name: pod.uid
+          type: keyword
+          description: >
+            Kubernetes Pod UID
+
+        - name: namespace
+          type: keyword
+          description: >
+            Kubernetes namespace
+
+        - name: node.name
+          type: keyword
+          description: >
+            Kubernetes node name
+
+        - name: labels
+          type: object
+          description: >
+            Kubernetes labels map
+
+        - name: annotations
+          type: object
+          description: >
+            Kubernetes annotations map
+
+        - name: container.name
+          type: keyword
+          description: >
+            Kubernetes container name
+
+        - name: container.image
+          type: keyword
+          description: >
+            Kubernetes container image

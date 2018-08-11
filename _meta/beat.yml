@@ -1,0 +1,7 @@
+################### Flowbeat Configuration Example #########################
+
+############################# Flowbeat ######################################
+
+flowbeat:
+  #netflow.address: ':2055'
+  #netflow.read_buffer: 65536

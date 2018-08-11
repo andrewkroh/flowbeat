@@ -1,0 +1,11 @@
+/.idea
+/build
+/_meta/kibana.generated
+/data
+/logs
+
+.DS_Store
+/flowbeat
+/flowbeat.test
+*.pyc
+flowbeat.dev.yml
