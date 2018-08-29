@@ -1,0 +1,729 @@
+{
+  "test_name": "netflow9_ubiquiti_edgerouter",
+  "events": [
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "159.65.125.168",
+          "locality": "public",
+          "mac": "04:18:d6:f0:81:b5",
+          "port": 80
+        },
+        "device": {
+          "ip": "10.100.4.1"
+        },
+        "event": {
+          "created": "2018-08-09T16:49:04Z",
+          "duration": 287000000,
+          "end": "2018-08-09T16:43:00.307Z",
+          "start": "2018-08-09T16:43:00.02Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.100.5.2:43376 - 159.65.125.168:80 TCP",
+          "id": "NPZRWU1oZKQ",
+          "locality": "public",
+          "sequence_num": 660
+        },
+        "netflow": {
+          "deltaFlowCount": 0,
+          "destinationIPv4Address": "159.65.125.168",
+          "destinationTransportPort": 80,
+          "egressInterface": 2,
+          "flowDirection": 1,
+          "flowEndSysUpTime": 1524297,
+          "flowStartSysUpTime": 1524010,
+          "ingressInterface": 3,
+          "ipClassOfService": 0,
+          "ipVersion": 4,
+          "mplsLabelStackLength": 2,
+          "octetDeltaCount": 421,
+          "packetDeltaCount": 6,
+          "postDestinationMacAddress": "04:18:d6:f0:81:b5",
+          "postSourceMacAddress": "00:11:bb:7f:20:42",
+          "postVlanId": 0,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.100.5.2",
+          "sourceTransportPort": 43376,
+          "tcpControlBits": 27,
+          "template_id": 1025
+        },
+        "network": {
+          "direction": "outbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "FIN",
+              "SYN",
+              "PSH",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 421,
+            "packets": 6
+          }
+        },
+        "source": {
+          "ip": "10.100.5.2",
+          "locality": "private",
+          "mac": "00:11:bb:7f:20:42",
+          "port": 43376
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "13.32.251.125",
+          "locality": "public",
+          "mac": "04:18:d6:f0:81:b5",
+          "port": 443
+        },
+        "device": {
+          "ip": "10.100.4.1"
+        },
+        "event": {
+          "created": "2018-08-09T16:49:04Z",
+          "duration": 30209000000,
+          "end": "2018-08-09T16:43:01.317Z",
+          "start": "2018-08-09T16:42:31.108Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.100.6.93:54520 - 13.32.251.125:443 TCP",
+          "id": "wMmxEUF-2Sk",
+          "locality": "public",
+          "sequence_num": 660
+        },
+        "netflow": {
+          "deltaFlowCount": 0,
+          "destinationIPv4Address": "13.32.251.125",
+          "destinationTransportPort": 443,
+          "egressInterface": 2,
+          "flowDirection": 1,
+          "flowEndSysUpTime": 1525307,
+          "flowStartSysUpTime": 1495098,
+          "ingressInterface": 3,
+          "ipClassOfService": 0,
+          "ipVersion": 4,
+          "mplsLabelStackLength": 2,
+          "octetDeltaCount": 7621,
+          "packetDeltaCount": 131,
+          "postDestinationMacAddress": "04:18:d6:f0:81:b5",
+          "postSourceMacAddress": "00:11:bb:7f:20:42",
+          "postVlanId": 0,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.100.6.93",
+          "sourceTransportPort": 54520,
+          "tcpControlBits": 27,
+          "template_id": 1025
+        },
+        "network": {
+          "direction": "outbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "FIN",
+              "SYN",
+              "PSH",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 7621,
+            "packets": 131
+          }
+        },
+        "source": {
+          "ip": "10.100.6.93",
+          "locality": "private",
+          "mac": "00:11:bb:7f:20:42",
+          "port": 54520
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "10.100.6.80",
+          "locality": "private",
+          "mac": "00:00:00:00:00:00",
+          "port": 62323
+        },
+        "device": {
+          "ip": "10.100.4.1"
+        },
+        "event": {
+          "created": "2018-08-09T16:49:04Z",
+          "duration": 0,
+          "end": "2018-08-09T16:43:01.41Z",
+          "start": "2018-08-09T16:43:01.41Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.100.6.80:62323 - 10.100.4.1:53 UDP",
+          "id": "2NG48p7EGpw",
+          "locality": "private",
+          "sequence_num": 661
+        },
+        "netflow": {
+          "deltaFlowCount": 0,
+          "destinationIPv4Address": "10.100.6.80",
+          "destinationTransportPort": 62323,
+          "egressInterface": 3,
+          "flowDirection": 1,
+          "flowEndSysUpTime": 1525400,
+          "flowStartSysUpTime": 1525400,
+          "ingressInterface": 0,
+          "ipClassOfService": 0,
+          "ipVersion": 4,
+          "mplsLabelStackLength": 3,
+          "octetDeltaCount": 95,
+          "packetDeltaCount": 1,
+          "postDestinationMacAddress": "00:00:00:00:00:00",
+          "postSourceMacAddress": "00:00:00:00:00:00",
+          "postVlanId": 0,
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "10.100.4.1",
+          "sourceTransportPort": 53,
+          "tcpControlBits": 0,
+          "template_id": 1025
+        },
+        "network": {
+          "direction": "outbound",
+          "protocol": "UDP",
+          "total": {
+            "bytes": 95,
+            "packets": 1
+          }
+        },
+        "source": {
+          "ip": "10.100.4.1",
+          "locality": "private",
+          "mac": "00:00:00:00:00:00",
+          "port": 53
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "13.32.251.8",
+          "locality": "public",
+          "mac": "04:18:d6:f0:81:b5",
+          "port": 443
+        },
+        "device": {
+          "ip": "10.100.4.1"
+        },
+        "event": {
+          "created": "2018-08-09T16:49:04Z",
+          "duration": 59651000000,
+          "end": "2018-08-09T16:43:02.334Z",
+          "start": "2018-08-09T16:42:02.683Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.100.6.93:54497 - 13.32.251.8:443 TCP",
+          "id": "f0LYEiUntL0",
+          "locality": "public",
+          "sequence_num": 661
+        },
+        "netflow": {
+          "deltaFlowCount": 0,
+          "destinationIPv4Address": "13.32.251.8",
+          "destinationTransportPort": 443,
+          "egressInterface": 2,
+          "flowDirection": 1,
+          "flowEndSysUpTime": 1526324,
+          "flowStartSysUpTime": 1466673,
+          "ingressInterface": 3,
+          "ipClassOfService": 0,
+          "ipVersion": 4,
+          "mplsLabelStackLength": 2,
+          "octetDeltaCount": 3162,
+          "packetDeltaCount": 30,
+          "postDestinationMacAddress": "04:18:d6:f0:81:b5",
+          "postSourceMacAddress": "00:11:bb:7f:20:42",
+          "postVlanId": 0,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.100.6.93",
+          "sourceTransportPort": 54497,
+          "tcpControlBits": 27,
+          "template_id": 1025
+        },
+        "network": {
+          "direction": "outbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "FIN",
+              "SYN",
+              "PSH",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 3162,
+            "packets": 30
+          }
+        },
+        "source": {
+          "ip": "10.100.6.93",
+          "locality": "private",
+          "mac": "00:11:bb:7f:20:42",
+          "port": 54497
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "52.22.76.61",
+          "locality": "public",
+          "mac": "04:18:d6:f0:81:b5",
+          "port": 443
+        },
+        "device": {
+          "ip": "10.100.4.1"
+        },
+        "event": {
+          "created": "2018-08-09T16:49:04Z",
+          "duration": 40015000000,
+          "end": "2018-08-09T16:43:02.876Z",
+          "start": "2018-08-09T16:42:22.861Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.100.6.80:50030 - 52.22.76.61:443 TCP",
+          "id": "9ATz0HlBbIQ",
+          "locality": "public",
+          "sequence_num": 661
+        },
+        "netflow": {
+          "deltaFlowCount": 0,
+          "destinationIPv4Address": "52.22.76.61",
+          "destinationTransportPort": 443,
+          "egressInterface": 2,
+          "flowDirection": 1,
+          "flowEndSysUpTime": 1526866,
+          "flowStartSysUpTime": 1486851,
+          "ingressInterface": 3,
+          "ipClassOfService": 0,
+          "ipVersion": 4,
+          "mplsLabelStackLength": 2,
+          "octetDeltaCount": 2711,
+          "packetDeltaCount": 13,
+          "postDestinationMacAddress": "04:18:d6:f0:81:b5",
+          "postSourceMacAddress": "00:11:bb:7f:20:42",
+          "postVlanId": 0,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.100.6.80",
+          "sourceTransportPort": 50030,
+          "tcpControlBits": 27,
+          "template_id": 1025
+        },
+        "network": {
+          "direction": "outbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "FIN",
+              "SYN",
+              "PSH",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 2711,
+            "packets": 13
+          }
+        },
+        "source": {
+          "ip": "10.100.6.80",
+          "locality": "private",
+          "mac": "00:11:bb:7f:20:42",
+          "port": 50030
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "13.32.251.125",
+          "locality": "public",
+          "mac": "04:18:d6:f0:81:b5",
+          "port": 443
+        },
+        "device": {
+          "ip": "10.100.4.1"
+        },
+        "event": {
+          "created": "2018-08-09T16:49:04Z",
+          "duration": 37121000000,
+          "end": "2018-08-09T16:43:02.43Z",
+          "start": "2018-08-09T16:42:25.309Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.100.6.93:54517 - 13.32.251.125:443 TCP",
+          "id": "vueGG5QVS_M",
+          "locality": "public",
+          "sequence_num": 661
+        },
+        "netflow": {
+          "deltaFlowCount": 0,
+          "destinationIPv4Address": "13.32.251.125",
+          "destinationTransportPort": 443,
+          "egressInterface": 2,
+          "flowDirection": 1,
+          "flowEndSysUpTime": 1526420,
+          "flowStartSysUpTime": 1489299,
+          "ingressInterface": 3,
+          "ipClassOfService": 0,
+          "ipVersion": 4,
+          "mplsLabelStackLength": 2,
+          "octetDeltaCount": 20855,
+          "packetDeltaCount": 346,
+          "postDestinationMacAddress": "04:18:d6:f0:81:b5",
+          "postSourceMacAddress": "00:11:bb:7f:20:42",
+          "postVlanId": 0,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.100.6.93",
+          "sourceTransportPort": 54517,
+          "tcpControlBits": 27,
+          "template_id": 1025
+        },
+        "network": {
+          "direction": "outbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "FIN",
+              "SYN",
+              "PSH",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 20855,
+            "packets": 346
+          }
+        },
+        "source": {
+          "ip": "10.100.6.93",
+          "locality": "private",
+          "mac": "00:11:bb:7f:20:42",
+          "port": 54517
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "13.32.251.125",
+          "locality": "public",
+          "mac": "04:18:d6:f0:81:b5",
+          "port": 443
+        },
+        "device": {
+          "ip": "10.100.4.1"
+        },
+        "event": {
+          "created": "2018-08-09T16:49:04Z",
+          "duration": 31322000000,
+          "end": "2018-08-09T16:43:02.43Z",
+          "start": "2018-08-09T16:42:31.108Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.100.6.93:54518 - 13.32.251.125:443 TCP",
+          "id": "rJySLUBW94Y",
+          "locality": "public",
+          "sequence_num": 661
+        },
+        "netflow": {
+          "deltaFlowCount": 0,
+          "destinationIPv4Address": "13.32.251.125",
+          "destinationTransportPort": 443,
+          "egressInterface": 2,
+          "flowDirection": 1,
+          "flowEndSysUpTime": 1526420,
+          "flowStartSysUpTime": 1495098,
+          "ingressInterface": 3,
+          "ipClassOfService": 0,
+          "ipVersion": 4,
+          "mplsLabelStackLength": 2,
+          "octetDeltaCount": 7495,
+          "packetDeltaCount": 129,
+          "postDestinationMacAddress": "04:18:d6:f0:81:b5",
+          "postSourceMacAddress": "00:11:bb:7f:20:42",
+          "postVlanId": 0,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.100.6.93",
+          "sourceTransportPort": 54518,
+          "tcpControlBits": 27,
+          "template_id": 1025
+        },
+        "network": {
+          "direction": "outbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "FIN",
+              "SYN",
+              "PSH",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 7495,
+            "packets": 129
+          }
+        },
+        "source": {
+          "ip": "10.100.6.93",
+          "locality": "private",
+          "mac": "00:11:bb:7f:20:42",
+          "port": 54518
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "13.32.251.125",
+          "locality": "public",
+          "mac": "04:18:d6:f0:81:b5",
+          "port": 443
+        },
+        "device": {
+          "ip": "10.100.4.1"
+        },
+        "event": {
+          "created": "2018-08-09T16:49:04Z",
+          "duration": 31226000000,
+          "end": "2018-08-09T16:43:02.334Z",
+          "start": "2018-08-09T16:42:31.108Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.100.6.93:54519 - 13.32.251.125:443 TCP",
+          "id": "pWQ3ZWUMRfU",
+          "locality": "public",
+          "sequence_num": 661
+        },
+        "netflow": {
+          "deltaFlowCount": 0,
+          "destinationIPv4Address": "13.32.251.125",
+          "destinationTransportPort": 443,
+          "egressInterface": 2,
+          "flowDirection": 1,
+          "flowEndSysUpTime": 1526324,
+          "flowStartSysUpTime": 1495098,
+          "ingressInterface": 3,
+          "ipClassOfService": 0,
+          "ipVersion": 4,
+          "mplsLabelStackLength": 2,
+          "octetDeltaCount": 7049,
+          "packetDeltaCount": 119,
+          "postDestinationMacAddress": "04:18:d6:f0:81:b5",
+          "postSourceMacAddress": "00:11:bb:7f:20:42",
+          "postVlanId": 0,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.100.6.93",
+          "sourceTransportPort": 54519,
+          "tcpControlBits": 27,
+          "template_id": 1025
+        },
+        "network": {
+          "direction": "outbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "FIN",
+              "SYN",
+              "PSH",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 7049,
+            "packets": 119
+          }
+        },
+        "source": {
+          "ip": "10.100.6.93",
+          "locality": "private",
+          "mac": "00:11:bb:7f:20:42",
+          "port": 54519
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "13.32.251.126",
+          "locality": "public",
+          "mac": "04:18:d6:f0:81:b5",
+          "port": 443
+        },
+        "device": {
+          "ip": "10.100.4.1"
+        },
+        "event": {
+          "created": "2018-08-09T16:49:04Z",
+          "duration": 30976000000,
+          "end": "2018-08-09T16:43:02.334Z",
+          "start": "2018-08-09T16:42:31.358Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.100.6.93:54521 - 13.32.251.126:443 TCP",
+          "id": "M0l00u11bWc",
+          "locality": "public",
+          "sequence_num": 661
+        },
+        "netflow": {
+          "deltaFlowCount": 0,
+          "destinationIPv4Address": "13.32.251.126",
+          "destinationTransportPort": 443,
+          "egressInterface": 2,
+          "flowDirection": 1,
+          "flowEndSysUpTime": 1526324,
+          "flowStartSysUpTime": 1495348,
+          "ingressInterface": 3,
+          "ipClassOfService": 0,
+          "ipVersion": 4,
+          "mplsLabelStackLength": 2,
+          "octetDeltaCount": 1348,
+          "packetDeltaCount": 13,
+          "postDestinationMacAddress": "04:18:d6:f0:81:b5",
+          "postSourceMacAddress": "00:11:bb:7f:20:42",
+          "postVlanId": 0,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.100.6.93",
+          "sourceTransportPort": 54521,
+          "tcpControlBits": 27,
+          "template_id": 1025
+        },
+        "network": {
+          "direction": "outbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "FIN",
+              "SYN",
+              "PSH",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 1348,
+            "packets": 13
+          }
+        },
+        "source": {
+          "ip": "10.100.6.93",
+          "locality": "private",
+          "mac": "00:11:bb:7f:20:42",
+          "port": 54521
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "10.100.0.1",
+          "locality": "private",
+          "mac": "00:00:00:00:00:00",
+          "port": 53
+        },
+        "device": {
+          "ip": "10.100.4.1"
+        },
+        "event": {
+          "created": "2018-08-09T16:49:04Z",
+          "duration": 0,
+          "end": "2018-08-09T16:43:06.28Z",
+          "start": "2018-08-09T16:43:06.28Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "192.168.1.4:57253 - 10.100.0.1:53 UDP",
+          "id": "lzKTutEyrKA",
+          "locality": "private",
+          "sequence_num": 661
+        },
+        "netflow": {
+          "deltaFlowCount": 0,
+          "destinationIPv4Address": "10.100.0.1",
+          "destinationTransportPort": 53,
+          "egressInterface": 2,
+          "flowDirection": 1,
+          "flowEndSysUpTime": 1530270,
+          "flowStartSysUpTime": 1530270,
+          "ingressInterface": 0,
+          "ipClassOfService": 0,
+          "ipVersion": 4,
+          "mplsLabelStackLength": 2,
+          "octetDeltaCount": 82,
+          "packetDeltaCount": 1,
+          "postDestinationMacAddress": "00:00:00:00:00:00",
+          "postSourceMacAddress": "00:00:00:00:00:00",
+          "postVlanId": 0,
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "192.168.1.4",
+          "sourceTransportPort": 57253,
+          "tcpControlBits": 0,
+          "template_id": 1025
+        },
+        "network": {
+          "direction": "outbound",
+          "protocol": "UDP",
+          "total": {
+            "bytes": 82,
+            "packets": 1
+          }
+        },
+        "source": {
+          "ip": "192.168.1.4",
+          "locality": "private",
+          "mac": "00:00:00:00:00:00",
+          "port": 57253
+        }
+      },
+      "Private": null
+    }
+  ]
+}

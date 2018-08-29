@@ -17,6 +17,9 @@ This project is very much a work in progress.
 The config is contained in `flowbeat.yml`. Use `-c <filename>` to point Flowbeat
 at a different config file.
 
+To use the geoip and ASN processors you need to download the GeoLite2 City and
+ASN databases from MaxMind: https://dev.maxmind.com/geoip/geoip2/geolite2/
+
 ```
 flowbeat:
   # UDP address to listen on for Netflow packets.
@@ -27,12 +30,22 @@ flowbeat:
 
 processors:
   # DNS reverse lookup on IPs in flow event.
-  - dns.lookup:
-      - type: reverse
-        fields:
-          device.ip: device.domain
-          source.ip: source.domain
-          destination.ip: destination.domain
+  - dns:
+      type: reverse
+      fields:
+        source.ip: source.hostname
+        destination.ip: destination.hostname
+        device.ip: device.hostname
+  - geoip:
+      fields:
+        source.ip: source.geo
+        destination.ip: destination.geo
+      database: GeoLite2-City.mmdb
+  - asn:
+      fields:
+        source.ip: source.as
+        destination.ip: destination.as
+      database: GeoLite2-ASN.mmdb
 
 output.elasticsearch:
   hosts: ["localhost:9200"]

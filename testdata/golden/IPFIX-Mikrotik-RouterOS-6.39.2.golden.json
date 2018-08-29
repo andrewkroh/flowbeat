@@ -1,0 +1,2723 @@
+{
+  "test_name": "IPFIX Mikrotik RouterOS 6.39.2",
+  "events": [
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "192.168.128.17",
+          "locality": "private",
+          "port": 123
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.10.8.197:123 - 192.168.128.17:123 UDP",
+          "id": "1SREAwMSn_Y",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "192.168.128.17",
+          "destinationTransportPort": 123,
+          "egressInterface": 7,
+          "flowEndSysUpTime": 2666794170,
+          "flowStartSysUpTime": 2666794170,
+          "ingressInterface": 13,
+          "ipNextHopIPv4Address": "192.168.224.1",
+          "ipVersion": 4,
+          "octetDeltaCount": 152,
+          "packetDeltaCount": 2,
+          "postNATDestinationIPv4Address": "192.168.128.17",
+          "postNATSourceIPv4Address": "192.168.230.216",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "10.10.8.197",
+          "sourceTransportPort": 123,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 152,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "10.10.8.197",
+          "locality": "private",
+          "port": 123
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "192.168.230.216",
+          "locality": "private",
+          "port": 82
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "192.168.35.143:46518 - 192.168.230.216:82 TCP",
+          "id": "-1ecQ0Y-YzY",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "192.168.230.216",
+          "destinationTransportPort": 82,
+          "egressInterface": 11,
+          "flowEndSysUpTime": 2666794210,
+          "flowStartSysUpTime": 2666794210,
+          "ingressInterface": 7,
+          "ipNextHopIPv4Address": "10.10.6.11",
+          "ipVersion": 4,
+          "octetDeltaCount": 502,
+          "packetDeltaCount": 8,
+          "postNATDestinationIPv4Address": "10.10.6.11",
+          "postNATSourceIPv4Address": "192.168.35.143",
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "192.168.35.143",
+          "sourceTransportPort": 46518,
+          "tcpControlBits": 2,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN"
+            ]
+          },
+          "total": {
+            "bytes": 502,
+            "packets": 8
+          }
+        },
+        "source": {
+          "ip": "192.168.35.143",
+          "locality": "private",
+          "port": 46518
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "192.168.35.143",
+          "locality": "private",
+          "port": 46518
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "192.168.35.143:46518 - 10.10.6.11:80 TCP",
+          "id": "_ztnBsqvzw4",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "192.168.35.143",
+          "destinationTransportPort": 46518,
+          "egressInterface": 7,
+          "flowEndSysUpTime": 2666794210,
+          "flowStartSysUpTime": 2666794210,
+          "ingressInterface": 11,
+          "ipNextHopIPv4Address": "192.168.224.1",
+          "ipVersion": 4,
+          "octetDeltaCount": 2233,
+          "packetDeltaCount": 8,
+          "postNATDestinationIPv4Address": "192.168.35.143",
+          "postNATSourceIPv4Address": "192.168.230.216",
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.10.6.11",
+          "sourceTransportPort": 80,
+          "tcpControlBits": 18,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 2233,
+            "packets": 8
+          }
+        },
+        "source": {
+          "ip": "10.10.6.11",
+          "locality": "private",
+          "port": 80
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "192.168.230.216",
+          "locality": "private",
+          "port": 123
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "192.168.128.17:123 - 192.168.230.216:123 UDP",
+          "id": "83jerlRbQig",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "192.168.230.216",
+          "destinationTransportPort": 123,
+          "egressInterface": 13,
+          "flowEndSysUpTime": 2666794210,
+          "flowStartSysUpTime": 2666794210,
+          "ingressInterface": 7,
+          "ipNextHopIPv4Address": "10.10.8.197",
+          "ipVersion": 4,
+          "octetDeltaCount": 152,
+          "packetDeltaCount": 2,
+          "postNATDestinationIPv4Address": "10.10.8.197",
+          "postNATSourceIPv4Address": "192.168.128.17",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "192.168.128.17",
+          "sourceTransportPort": 123,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 152,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "192.168.128.17",
+          "locality": "private",
+          "port": 123
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "172.20.5.191",
+          "locality": "private",
+          "port": 42502
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.20.5.191:42502 - 10.10.8.220:80 TCP",
+          "id": "r6DcuKSlKG8",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "172.20.5.191",
+          "destinationTransportPort": 42502,
+          "egressInterface": 9,
+          "flowEndSysUpTime": 2666794300,
+          "flowStartSysUpTime": 2666793230,
+          "ingressInterface": 13,
+          "ipNextHopIPv4Address": "172.20.5.191",
+          "ipVersion": 4,
+          "octetDeltaCount": 79724,
+          "packetDeltaCount": 57,
+          "postNATDestinationIPv4Address": "172.20.5.191",
+          "postNATSourceIPv4Address": "10.10.8.220",
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.10.8.220",
+          "sourceTransportPort": 80,
+          "tcpControlBits": 18,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 79724,
+            "packets": 57
+          }
+        },
+        "source": {
+          "ip": "10.10.8.220",
+          "locality": "private",
+          "port": 80
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "172.20.4.1",
+          "locality": "private",
+          "port": 53
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.20.4.199:10240 - 172.20.4.1:53 UDP",
+          "id": "MJV4se1d1EY",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "172.20.4.1",
+          "destinationTransportPort": 53,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666794320,
+          "flowStartSysUpTime": 2666794320,
+          "ingressInterface": 9,
+          "ipNextHopIPv4Address": "172.20.4.1",
+          "ipVersion": 4,
+          "octetDeltaCount": 161,
+          "packetDeltaCount": 3,
+          "postNATDestinationIPv4Address": "172.20.4.1",
+          "postNATSourceIPv4Address": "172.20.4.199",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "172.20.4.199",
+          "sourceTransportPort": 10240,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 161,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "172.20.4.199",
+          "locality": "private",
+          "port": 10240
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "172.20.4.199",
+          "locality": "private",
+          "port": 10240
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.20.4.199:10240 - 172.20.4.1:53 UDP",
+          "id": "MJV4se1d1EY",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "172.20.4.199",
+          "destinationTransportPort": 10240,
+          "egressInterface": 9,
+          "flowEndSysUpTime": 2666794320,
+          "flowStartSysUpTime": 2666794320,
+          "ingressInterface": 0,
+          "ipNextHopIPv4Address": "172.20.4.199",
+          "ipVersion": 4,
+          "octetDeltaCount": 245,
+          "packetDeltaCount": 3,
+          "postNATDestinationIPv4Address": "172.20.4.199",
+          "postNATSourceIPv4Address": "172.20.4.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "172.20.4.1",
+          "sourceTransportPort": 53,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 245,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "172.20.4.1",
+          "locality": "private",
+          "port": 53
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "10.10.8.34",
+          "locality": "private"
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.20.4.30:0 - 10.10.8.34:0 ICMP",
+          "id": "Md4y9RxWsu0",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "10.10.8.34",
+          "destinationTransportPort": 0,
+          "egressInterface": 13,
+          "flowEndSysUpTime": 2666794330,
+          "flowStartSysUpTime": 2666790320,
+          "ingressInterface": 9,
+          "ipNextHopIPv4Address": "10.10.8.34",
+          "ipVersion": 4,
+          "octetDeltaCount": 504,
+          "packetDeltaCount": 6,
+          "postNATDestinationIPv4Address": "10.10.8.34",
+          "postNATSourceIPv4Address": "172.20.4.30",
+          "protocolIdentifier": 1,
+          "sourceIPv4Address": "172.20.4.30",
+          "sourceTransportPort": 0,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "ICMP",
+          "total": {
+            "bytes": 504,
+            "packets": 6
+          }
+        },
+        "source": {
+          "ip": "172.20.4.30",
+          "locality": "private"
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "172.20.4.30",
+          "locality": "private",
+          "port": 59571
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.20.4.30:59571 - 10.10.8.105:22 TCP",
+          "id": "_XZysP4InTc",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "172.20.4.30",
+          "destinationTransportPort": 59571,
+          "egressInterface": 9,
+          "flowEndSysUpTime": 2666794400,
+          "flowStartSysUpTime": 2666792700,
+          "ingressInterface": 13,
+          "ipNextHopIPv4Address": "172.20.4.30",
+          "ipVersion": 4,
+          "octetDeltaCount": 784,
+          "packetDeltaCount": 6,
+          "postNATDestinationIPv4Address": "172.20.4.30",
+          "postNATSourceIPv4Address": "10.10.8.105",
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.10.8.105",
+          "sourceTransportPort": 22,
+          "tcpControlBits": 18,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 784,
+            "packets": 6
+          }
+        },
+        "source": {
+          "ip": "10.10.8.105",
+          "locality": "private",
+          "port": 22
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "10.10.8.105",
+          "locality": "private",
+          "port": 22
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.20.4.30:59571 - 10.10.8.105:22 TCP",
+          "id": "_XZysP4InTc",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "10.10.8.105",
+          "destinationTransportPort": 22,
+          "egressInterface": 13,
+          "flowEndSysUpTime": 2666794400,
+          "flowStartSysUpTime": 2666792270,
+          "ingressInterface": 9,
+          "ipNextHopIPv4Address": "10.10.8.105",
+          "ipVersion": 4,
+          "octetDeltaCount": 433,
+          "packetDeltaCount": 8,
+          "postNATDestinationIPv4Address": "10.10.8.105",
+          "postNATSourceIPv4Address": "172.20.4.30",
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "172.20.4.30",
+          "sourceTransportPort": 59571,
+          "tcpControlBits": 2,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN"
+            ]
+          },
+          "total": {
+            "bytes": 433,
+            "packets": 8
+          }
+        },
+        "source": {
+          "ip": "172.20.4.30",
+          "locality": "private",
+          "port": 59571
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "192.168.183.199",
+          "locality": "private",
+          "port": 6667
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.10.7.11:48378 - 192.168.183.199:6667 TCP",
+          "id": "5stvUzTWY8c",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "192.168.183.199",
+          "destinationTransportPort": 6667,
+          "egressInterface": 7,
+          "flowEndSysUpTime": 2666794440,
+          "flowStartSysUpTime": 2666794440,
+          "ingressInterface": 12,
+          "ipNextHopIPv4Address": "192.168.224.1",
+          "ipVersion": 4,
+          "octetDeltaCount": 196,
+          "packetDeltaCount": 3,
+          "postNATDestinationIPv4Address": "192.168.183.199",
+          "postNATSourceIPv4Address": "192.168.230.216",
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.10.7.11",
+          "sourceTransportPort": 48378,
+          "tcpControlBits": 24,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "PSH",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 196,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "10.10.7.11",
+          "locality": "private",
+          "port": 48378
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "192.168.230.216",
+          "locality": "private",
+          "port": 48378
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "192.168.230.216:48378 - 192.168.183.199:6667 TCP",
+          "id": "VdPCBSYnnS0",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "192.168.230.216",
+          "destinationTransportPort": 48378,
+          "egressInterface": 12,
+          "flowEndSysUpTime": 2666794490,
+          "flowStartSysUpTime": 2666794490,
+          "ingressInterface": 7,
+          "ipNextHopIPv4Address": "10.10.7.11",
+          "ipVersion": 4,
+          "octetDeltaCount": 206,
+          "packetDeltaCount": 3,
+          "postNATDestinationIPv4Address": "10.10.7.11",
+          "postNATSourceIPv4Address": "192.168.183.199",
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "192.168.183.199",
+          "sourceTransportPort": 6667,
+          "tcpControlBits": 16,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 206,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "192.168.183.199",
+          "locality": "private",
+          "port": 6667
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "172.20.4.30",
+          "locality": "private"
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.10.8.34:0 - 172.20.4.30:0 ICMP",
+          "id": "asoP1PL3Pao",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "172.20.4.30",
+          "destinationTransportPort": 0,
+          "egressInterface": 9,
+          "flowEndSysUpTime": 2666794700,
+          "flowStartSysUpTime": 2666790400,
+          "ingressInterface": 13,
+          "ipNextHopIPv4Address": "172.20.4.30",
+          "ipVersion": 4,
+          "octetDeltaCount": 504,
+          "packetDeltaCount": 6,
+          "postNATDestinationIPv4Address": "172.20.4.30",
+          "postNATSourceIPv4Address": "10.10.8.34",
+          "protocolIdentifier": 1,
+          "sourceIPv4Address": "10.10.8.34",
+          "sourceTransportPort": 0,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "ICMP",
+          "total": {
+            "bytes": 504,
+            "packets": 6
+          }
+        },
+        "source": {
+          "ip": "10.10.8.34",
+          "locality": "private"
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "10.10.8.220",
+          "locality": "private",
+          "port": 80
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.20.5.191:42502 - 10.10.8.220:80 TCP",
+          "id": "r6DcuKSlKG8",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "10.10.8.220",
+          "destinationTransportPort": 80,
+          "egressInterface": 13,
+          "flowEndSysUpTime": 2666794930,
+          "flowStartSysUpTime": 2666792760,
+          "ingressInterface": 9,
+          "ipNextHopIPv4Address": "10.10.8.220",
+          "ipVersion": 4,
+          "octetDeltaCount": 3539,
+          "packetDeltaCount": 58,
+          "postNATDestinationIPv4Address": "10.10.8.220",
+          "postNATSourceIPv4Address": "172.20.5.191",
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "172.20.5.191",
+          "sourceTransportPort": 42502,
+          "tcpControlBits": 2,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN"
+            ]
+          },
+          "total": {
+            "bytes": 3539,
+            "packets": 58
+          }
+        },
+        "source": {
+          "ip": "172.20.5.191",
+          "locality": "private",
+          "port": 42502
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.20.4.1:33332 - 255.255.255.255:5678 UDP",
+          "id": "4AA5ETLDkm0",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 9,
+          "flowEndSysUpTime": 2666795740,
+          "flowStartSysUpTime": 2666795740,
+          "ingressInterface": 0,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 495,
+          "packetDeltaCount": 3,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "172.20.4.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "172.20.4.1",
+          "sourceTransportPort": 33332,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 495,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "172.20.4.1",
+          "locality": "private",
+          "port": 33332
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.20.4.1:33332 - 255.255.255.255:5678 UDP",
+          "id": "4AA5ETLDkm0",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795740,
+          "flowStartSysUpTime": 2666795740,
+          "ingressInterface": 9,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 330,
+          "packetDeltaCount": 2,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "172.20.4.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "172.20.4.1",
+          "sourceTransportPort": 33332,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 330,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "172.20.4.1",
+          "locality": "private",
+          "port": 33332
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.30.0.1:53298 - 255.255.255.255:5678 UDP",
+          "id": "BaTGW6h8V9s",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 10,
+          "flowEndSysUpTime": 2666795740,
+          "flowStartSysUpTime": 2666795740,
+          "ingressInterface": 0,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 435,
+          "packetDeltaCount": 3,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "172.30.0.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "172.30.0.1",
+          "sourceTransportPort": 53298,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 435,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "172.30.0.1",
+          "locality": "private",
+          "port": 53298
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.30.0.1:53298 - 255.255.255.255:5678 UDP",
+          "id": "BaTGW6h8V9s",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795740,
+          "flowStartSysUpTime": 2666795740,
+          "ingressInterface": 10,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 290,
+          "packetDeltaCount": 2,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "172.30.0.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "172.30.0.1",
+          "sourceTransportPort": 53298,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 290,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "172.30.0.1",
+          "locality": "private",
+          "port": 53298
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.10.6.1:48172 - 255.255.255.255:5678 UDP",
+          "id": "a0peNOTOYXA",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 11,
+          "flowEndSysUpTime": 2666795740,
+          "flowStartSysUpTime": 2666795740,
+          "ingressInterface": 0,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 495,
+          "packetDeltaCount": 3,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "10.10.6.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "10.10.6.1",
+          "sourceTransportPort": 48172,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 495,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "10.10.6.1",
+          "locality": "private",
+          "port": 48172
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.10.6.1:48172 - 255.255.255.255:5678 UDP",
+          "id": "a0peNOTOYXA",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795740,
+          "flowStartSysUpTime": 2666795740,
+          "ingressInterface": 11,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 330,
+          "packetDeltaCount": 2,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "10.10.6.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "10.10.6.1",
+          "sourceTransportPort": 48172,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 330,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "10.10.6.1",
+          "locality": "private",
+          "port": 48172
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.10.7.1:48935 - 255.255.255.255:5678 UDP",
+          "id": "rX81_0wnl4c",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 12,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 0,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 495,
+          "packetDeltaCount": 3,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "10.10.7.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "10.10.7.1",
+          "sourceTransportPort": 48935,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 495,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "10.10.7.1",
+          "locality": "private",
+          "port": 48935
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.10.7.1:48935 - 255.255.255.255:5678 UDP",
+          "id": "rX81_0wnl4c",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 12,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 330,
+          "packetDeltaCount": 2,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "10.10.7.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "10.10.7.1",
+          "sourceTransportPort": 48935,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 330,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "10.10.7.1",
+          "locality": "private",
+          "port": 48935
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.10.8.1:51931 - 255.255.255.255:5678 UDP",
+          "id": "7EW3D8kjT4Q",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 13,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 0,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 495,
+          "packetDeltaCount": 3,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "10.10.8.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "10.10.8.1",
+          "sourceTransportPort": 51931,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 495,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "10.10.8.1",
+          "locality": "private",
+          "port": 51931
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.10.8.1:51931 - 255.255.255.255:5678 UDP",
+          "id": "7EW3D8kjT4Q",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 13,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 330,
+          "packetDeltaCount": 2,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "10.10.8.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "10.10.8.1",
+          "sourceTransportPort": 51931,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 330,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "10.10.8.1",
+          "locality": "private",
+          "port": 51931
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.20.0.1:43454 - 255.255.255.255:5678 UDP",
+          "id": "JacJ1_FgpYg",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 14,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 0,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 495,
+          "packetDeltaCount": 3,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "10.20.0.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "10.20.0.1",
+          "sourceTransportPort": 43454,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 495,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "10.20.0.1",
+          "locality": "private",
+          "port": 43454
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.20.0.1:43454 - 255.255.255.255:5678 UDP",
+          "id": "JacJ1_FgpYg",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 14,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 330,
+          "packetDeltaCount": 2,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "10.20.0.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "10.20.0.1",
+          "sourceTransportPort": 43454,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 330,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "10.20.0.1",
+          "locality": "private",
+          "port": 43454
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.10.10.1:52837 - 255.255.255.255:5678 UDP",
+          "id": "38frmBtEgfI",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 15,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 0,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 495,
+          "packetDeltaCount": 3,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "10.10.10.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "10.10.10.1",
+          "sourceTransportPort": 52837,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 495,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "10.10.10.1",
+          "locality": "private",
+          "port": 52837
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "255.255.255.255",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.10.10.1:52837 - 255.255.255.255:5678 UDP",
+          "id": "38frmBtEgfI",
+          "locality": "private",
+          "sequence_num": 3936
+        },
+        "netflow": {
+          "destinationIPv4Address": "255.255.255.255",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 15,
+          "ipNextHopIPv4Address": "255.255.255.255",
+          "ipVersion": 4,
+          "octetDeltaCount": 330,
+          "packetDeltaCount": 2,
+          "postNATDestinationIPv4Address": "255.255.255.255",
+          "postNATSourceIPv4Address": "10.10.10.1",
+          "protocolIdentifier": 17,
+          "sourceIPv4Address": "10.10.10.1",
+          "sourceTransportPort": 52837,
+          "tcpControlBits": 0,
+          "template_id": 258
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 330,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "10.10.10.1",
+          "locality": "private",
+          "port": 52837
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:401",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:401:5678 - fe80::ff:fe00:401:5678 UDP",
+          "id": "b7SlZfUSuVA",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:401",
+          "destinationTransportPort": 5678,
+          "egressInterface": 9,
+          "flowEndSysUpTime": 2666795740,
+          "flowStartSysUpTime": 2666795740,
+          "ingressInterface": 0,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 555,
+          "packetDeltaCount": 3,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:401",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 555,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:401",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:401",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:401:5678 - fe80::ff:fe00:401:5678 UDP",
+          "id": "b7SlZfUSuVA",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:401",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795740,
+          "flowStartSysUpTime": 2666795740,
+          "ingressInterface": 9,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 370,
+          "packetDeltaCount": 2,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:401",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 370,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:401",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:501",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:501:5678 - fe80::ff:fe00:501:5678 UDP",
+          "id": "VSgWWLDT0B0",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:501",
+          "destinationTransportPort": 5678,
+          "egressInterface": 10,
+          "flowEndSysUpTime": 2666795740,
+          "flowStartSysUpTime": 2666795740,
+          "ingressInterface": 0,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 495,
+          "packetDeltaCount": 3,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:501",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 495,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:501",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:501",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:501:5678 - fe80::ff:fe00:501:5678 UDP",
+          "id": "VSgWWLDT0B0",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:501",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795740,
+          "flowStartSysUpTime": 2666795740,
+          "ingressInterface": 10,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 330,
+          "packetDeltaCount": 2,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:501",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 330,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:501",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:601",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:601:5678 - fe80::ff:fe00:601:5678 UDP",
+          "id": "LZgYFJ0tL2g",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:601",
+          "destinationTransportPort": 5678,
+          "egressInterface": 11,
+          "flowEndSysUpTime": 2666795740,
+          "flowStartSysUpTime": 2666795740,
+          "ingressInterface": 0,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 555,
+          "packetDeltaCount": 3,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:601",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 555,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:601",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:601",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:601:5678 - fe80::ff:fe00:601:5678 UDP",
+          "id": "LZgYFJ0tL2g",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:601",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795740,
+          "flowStartSysUpTime": 2666795740,
+          "ingressInterface": 11,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 370,
+          "packetDeltaCount": 2,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:601",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 370,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:601",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:701",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:701:5678 - fe80::ff:fe00:701:5678 UDP",
+          "id": "dmeH14jqz_U",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:701",
+          "destinationTransportPort": 5678,
+          "egressInterface": 12,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 0,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 555,
+          "packetDeltaCount": 3,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:701",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 555,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:701",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:701",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:701:5678 - fe80::ff:fe00:701:5678 UDP",
+          "id": "dmeH14jqz_U",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:701",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 12,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 370,
+          "packetDeltaCount": 2,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:701",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 370,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:701",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:801",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:801:5678 - fe80::ff:fe00:801:5678 UDP",
+          "id": "Il9O6oJGqRk",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:801",
+          "destinationTransportPort": 5678,
+          "egressInterface": 13,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 0,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 555,
+          "packetDeltaCount": 3,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:801",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 555,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:801",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:801",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:801:5678 - fe80::ff:fe00:801:5678 UDP",
+          "id": "Il9O6oJGqRk",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:801",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 13,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 370,
+          "packetDeltaCount": 2,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:801",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 370,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:801",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:901",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:901:5678 - fe80::ff:fe00:901:5678 UDP",
+          "id": "fA2V7HT45yo",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:901",
+          "destinationTransportPort": 5678,
+          "egressInterface": 14,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 0,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 555,
+          "packetDeltaCount": 3,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:901",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 555,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:901",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:901",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:901:5678 - fe80::ff:fe00:901:5678 UDP",
+          "id": "fA2V7HT45yo",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:901",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 14,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 370,
+          "packetDeltaCount": 2,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:901",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 370,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:901",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:1001",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:1001:5678 - fe80::ff:fe00:1001:5678 UDP",
+          "id": "r9myTc0ZAtE",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:1001",
+          "destinationTransportPort": 5678,
+          "egressInterface": 15,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 0,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 555,
+          "packetDeltaCount": 3,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:1001",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 555,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:1001",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:1001",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:1001:5678 - fe80::ff:fe00:1001:5678 UDP",
+          "id": "r9myTc0ZAtE",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:1001",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 15,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 370,
+          "packetDeltaCount": 2,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:1001",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 370,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:1001",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:1101",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:1101:5678 - fe80::ff:fe00:1101:5678 UDP",
+          "id": "we4v-M4gTEo",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:1101",
+          "destinationTransportPort": 5678,
+          "egressInterface": 16,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 0,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 555,
+          "packetDeltaCount": 3,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:1101",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 555,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:1101",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:1101",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:1101:5678 - fe80::ff:fe00:1101:5678 UDP",
+          "id": "we4v-M4gTEo",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:1101",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 16,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 370,
+          "packetDeltaCount": 2,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:1101",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 370,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:1101",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:1201",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:1201:5678 - fe80::ff:fe00:1201:5678 UDP",
+          "id": "N9KUKy-eIwc",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:1201",
+          "destinationTransportPort": 5678,
+          "egressInterface": 17,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 0,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 555,
+          "packetDeltaCount": 3,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:1201",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 555,
+            "packets": 3
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:1201",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "fe80::ff:fe00:1201",
+          "locality": "private",
+          "port": 5678
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-07-19T16:18:08Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "fe80::ff:fe00:1201:5678 - fe80::ff:fe00:1201:5678 UDP",
+          "id": "N9KUKy-eIwc",
+          "locality": "private",
+          "sequence_num": 3964
+        },
+        "netflow": {
+          "destinationIPv6Address": "fe80::ff:fe00:1201",
+          "destinationTransportPort": 5678,
+          "egressInterface": 0,
+          "flowEndSysUpTime": 2666795750,
+          "flowStartSysUpTime": 2666795750,
+          "ingressInterface": 17,
+          "ipNextHopIPv6Address": "ff02::1",
+          "ipVersion": 6,
+          "octetDeltaCount": 370,
+          "packetDeltaCount": 2,
+          "protocolIdentifier": 17,
+          "sourceIPv6Address": "fe80::ff:fe00:1201",
+          "sourceTransportPort": 5678,
+          "tcpControlBits": 0,
+          "template_id": 259
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 370,
+            "packets": 2
+          }
+        },
+        "source": {
+          "ip": "fe80::ff:fe00:1201",
+          "locality": "private",
+          "port": 5678
+        }
+      },
+      "Private": null
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "test_name": "Netflow 9 ipt_netflow reduced size encoding",
+  "error": "failed to decode payload: EOF"
+}

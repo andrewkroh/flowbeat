@@ -1,0 +1,135 @@
+{
+  "test_name": "IPFIX YAF basic with applabel",
+  "events": [
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "172.16.32.100",
+          "locality": "private",
+          "port": 53
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2016-12-25T13:03:38Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.16.32.201:46086 - 172.16.32.100:53 UDP",
+          "id": "QMH_S2K9KdI",
+          "locality": "private",
+          "sequence_num": 34
+        },
+        "netflow": {
+          "destinationIPv4Address": "172.16.32.100",
+          "destinationTransportPort": 53,
+          "flowAttributes": 1,
+          "flowEndMilliseconds": "2016-12-25T07:58:35.819-05:00",
+          "flowEndReason": 1,
+          "flowStartMilliseconds": "2016-12-25T07:58:35.818-05:00",
+          "ipClassOfService": 0,
+          "octetTotalCount": 132,
+          "packetTotalCount": 2,
+          "protocolIdentifier": 17,
+          "reverseFlowDeltaMilliseconds": "AAAAAQ==",
+          "reverseIpClassOfService": 0,
+          "reverseOctetTotalCount": 200,
+          "reversePacketTotalCount": 2,
+          "reverseVlanId": 0,
+          "silkAppLabel": 0,
+          "sourceIPv4Address": "172.16.32.201",
+          "sourceTransportPort": 46086,
+          "subTemplateMultiList": "A8AEABAADClwhgkADCmNr8M=",
+          "template_id": 45841,
+          "vlanId": 0
+        },
+        "network": {
+          "protocol": "UDP",
+          "total": {
+            "bytes": 0,
+            "packets": 0
+          }
+        },
+        "source": {
+          "ip": "172.16.32.201",
+          "locality": "private",
+          "port": 46086
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "172.16.32.215",
+          "locality": "private",
+          "port": 9997
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2016-12-25T12:58:38Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "172.16.32.100:63499 - 172.16.32.215:9997 TCP",
+          "id": "YlvEOsG0NHc",
+          "locality": "private",
+          "sequence_num": 0
+        },
+        "netflow": {
+          "destinationIPv4Address": "172.16.32.215",
+          "destinationTransportPort": 9997,
+          "flowAttributes": 0,
+          "flowEndMilliseconds": "2016-12-25T07:58:34.347-05:00",
+          "flowEndReason": 3,
+          "flowStartMilliseconds": "2016-12-25T07:58:33.345-05:00",
+          "initialTCPFlags": 194,
+          "ipClassOfService": 2,
+          "octetTotalCount": 172,
+          "packetTotalCount": 4,
+          "protocolIdentifier": 6,
+          "reverseFlowDeltaMilliseconds": "AAAAAA==",
+          "reverseIpClassOfService": 0,
+          "reverseOctetTotalCount": 92,
+          "reversePacketTotalCount": 2,
+          "reverseTcpSequenceNumber": 3788795034,
+          "reverseVlanId": 0,
+          "silkAppLabel": 0,
+          "sourceIPv4Address": "172.16.32.100",
+          "sourceTransportPort": 63499,
+          "subTemplateMultiList": "A8AEABAADCmNr8MADCmobi8=",
+          "tcpSequenceNumber": 340533701,
+          "template_id": 45873,
+          "unionTCPFlags": 17,
+          "vlanId": 0
+        },
+        "network": {
+          "protocol": "TCP",
+          "total": {
+            "bytes": 0,
+            "packets": 0
+          }
+        },
+        "source": {
+          "ip": "172.16.32.100",
+          "locality": "private",
+          "port": 63499
+        }
+      },
+      "Private": null
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "test_name": "Netflow 9 nprobe DPI L7",
+  "events": [
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "0.0.0.0",
+          "locality": "private"
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "1970-01-01T00:08:22Z",
+          "duration": 0,
+          "end": "1970-01-01T00:08:22Z",
+          "start": "1970-01-01T00:08:22Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "0.0.0.0:0 - 0.0.0.0:0 unknown (0)",
+          "id": "oFN7CMNpOLQ",
+          "locality": "private",
+          "sequence_num": 2
+        },
+        "netflow": {
+          "applicationId": "AAAAUg==",
+          "applicationName": "\u0000\u0000\u0000\u0000\u0000\"\u0000\u0000\u0000\u0000\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+          "destinationIPv4Address": "0.0.0.0",
+          "destinationTransportPort": 0,
+          "flowEndSysUpTime": 104000,
+          "flowStartSysUpTime": 101000,
+          "octetDeltaCount": 82,
+          "packetDeltaCount": 1,
+          "protocolIdentifier": 0,
+          "sourceIPv4Address": "0.0.0.0",
+          "sourceTransportPort": 0,
+          "template_id": 256
+        },
+        "network": {
+          "protocol": "unknown (0)",
+          "total": {
+            "bytes": 82,
+            "packets": 1
+          }
+        },
+        "source": {
+          "ip": "0.0.0.0",
+          "locality": "private"
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "0.0.0.0",
+          "locality": "private"
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "1970-01-01T00:08:22Z",
+          "duration": 0,
+          "end": "1970-01-01T00:08:22Z",
+          "start": "1970-01-01T00:08:22Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "0.0.0.0:0 - 0.0.0.0:0 unknown (0)",
+          "id": "oFN7CMNpOLQ",
+          "locality": "private",
+          "sequence_num": 2
+        },
+        "netflow": {
+          "destinationIPv4Address": "0.0.0.0",
+          "flowEndSysUpTime": 285212672,
+          "flowStartSysUpTime": 1811939328,
+          "protocolIdentifier": 0,
+          "sourceIPv4Address": "0.0.0.0",
+          "template_id": 256
+        },
+        "network": {
+          "protocol": "unknown (0)",
+          "total": {
+            "bytes": 0,
+            "packets": 0
+          }
+        },
+        "source": {
+          "ip": "0.0.0.0",
+          "locality": "private"
+        }
+      },
+      "Private": null
+    }
+  ]
+}

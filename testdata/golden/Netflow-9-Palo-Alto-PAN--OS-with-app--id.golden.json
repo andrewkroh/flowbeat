@@ -1,0 +1,547 @@
+{
+  "test_name": "Netflow 9 Palo Alto PAN-OS with app-id",
+  "events": [
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "10.32.91.205",
+          "locality": "private",
+          "port": 49519
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-11-13T14:39:31Z",
+          "duration": 0,
+          "end": "2017-11-13T14:39:31Z",
+          "start": "2017-11-13T14:39:31Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.32.91.205:49519 - 23.35.171.27:80 TCP",
+          "id": "0HZ2F4aNlps",
+          "locality": "public",
+          "sequence_num": 207392627
+        },
+        "netflow": {
+          "destinationIPv4Address": "10.32.91.205",
+          "destinationTransportPort": 49519,
+          "egressInterface": 24,
+          "firewallEvent": 1,
+          "flowDirection": 0,
+          "flowEndSysUpTime": 1803238112,
+          "flowId": 421604,
+          "flowStartSysUpTime": 1803238112,
+          "icmpTypeCodeIPv4": 0,
+          "ingressInterface": 23,
+          "ipClassOfService": 0,
+          "octetDeltaCount": 70,
+          "packetDeltaCount": 1,
+          "privateEnterpriseNumber": 25461,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "23.35.171.27",
+          "sourceTransportPort": 80,
+          "tcpControlBits": 18,
+          "template_id": 257
+        },
+        "network": {
+          "direction": "inbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 70,
+            "packets": 1
+          }
+        },
+        "source": {
+          "ip": "23.35.171.27",
+          "locality": "public",
+          "port": 80
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "162.115.24.30",
+          "locality": "public",
+          "port": 443
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-11-13T14:39:31Z",
+          "duration": 339000000000,
+          "end": "2017-11-13T14:39:31Z",
+          "start": "2017-11-13T14:33:52Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.32.105.103:39702 - 162.115.24.30:443 TCP",
+          "id": "GTu1zsDt3yw",
+          "locality": "public",
+          "sequence_num": 207392627
+        },
+        "netflow": {
+          "destinationIPv4Address": "162.115.24.30",
+          "destinationTransportPort": 443,
+          "egressInterface": 23,
+          "firewallEvent": 5,
+          "flowDirection": 0,
+          "flowEndSysUpTime": 1803238112,
+          "flowId": 415347,
+          "flowStartSysUpTime": 1802899112,
+          "icmpTypeCodeIPv4": 0,
+          "ingressInterface": 24,
+          "ipClassOfService": 0,
+          "octetDeltaCount": 111,
+          "packetDeltaCount": 1,
+          "privateEnterpriseNumber": 25461,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.32.105.103",
+          "sourceTransportPort": 39702,
+          "tcpControlBits": 26,
+          "template_id": 257
+        },
+        "network": {
+          "direction": "inbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN",
+              "PSH",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 111,
+            "packets": 1
+          }
+        },
+        "source": {
+          "ip": "10.32.105.103",
+          "locality": "private",
+          "port": 39702
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "34.202.173.126",
+          "locality": "public",
+          "port": 443
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-11-13T14:39:31Z",
+          "duration": 0,
+          "end": "2017-11-13T14:39:31Z",
+          "start": "2017-11-13T14:39:31Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.32.144.145:52069 - 34.202.173.126:443 TCP",
+          "id": "nUCuFEB8z_c",
+          "locality": "public",
+          "sequence_num": 207392627
+        },
+        "netflow": {
+          "destinationIPv4Address": "34.202.173.126",
+          "destinationTransportPort": 443,
+          "egressInterface": 23,
+          "firewallEvent": 1,
+          "flowDirection": 0,
+          "flowEndSysUpTime": 1803238112,
+          "flowId": 34878752,
+          "flowStartSysUpTime": 1803238112,
+          "icmpTypeCodeIPv4": 0,
+          "ingressInterface": 24,
+          "ipClassOfService": 0,
+          "octetDeltaCount": 70,
+          "packetDeltaCount": 1,
+          "privateEnterpriseNumber": 25461,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.32.144.145",
+          "sourceTransportPort": 52069,
+          "tcpControlBits": 2,
+          "template_id": 257
+        },
+        "network": {
+          "direction": "inbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN"
+            ]
+          },
+          "total": {
+            "bytes": 70,
+            "packets": 1
+          }
+        },
+        "source": {
+          "ip": "10.32.144.145",
+          "locality": "private",
+          "port": 52069
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "10.130.145.44",
+          "locality": "private",
+          "port": 49449
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-11-13T14:39:31Z",
+          "duration": 0,
+          "end": "2017-11-13T14:39:31Z",
+          "start": "2017-11-13T14:39:31Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.130.145.44:49449 - 23.209.52.99:443 TCP",
+          "id": "inYZm0Y9EVM",
+          "locality": "public",
+          "sequence_num": 207392627
+        },
+        "netflow": {
+          "destinationIPv4Address": "10.130.145.44",
+          "destinationTransportPort": 49449,
+          "egressInterface": 24,
+          "firewallEvent": 1,
+          "flowDirection": 0,
+          "flowEndSysUpTime": 1803238112,
+          "flowId": 34578179,
+          "flowStartSysUpTime": 1803238112,
+          "icmpTypeCodeIPv4": 0,
+          "ingressInterface": 23,
+          "ipClassOfService": 0,
+          "octetDeltaCount": 70,
+          "packetDeltaCount": 1,
+          "privateEnterpriseNumber": 25461,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "23.209.52.99",
+          "sourceTransportPort": 443,
+          "tcpControlBits": 18,
+          "template_id": 257
+        },
+        "network": {
+          "direction": "inbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 70,
+            "packets": 1
+          }
+        },
+        "source": {
+          "ip": "23.209.52.99",
+          "locality": "public",
+          "port": 443
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "10.50.96.20",
+          "locality": "private",
+          "port": 5432
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-11-13T14:39:31Z",
+          "duration": 0,
+          "end": "2017-11-13T14:39:31Z",
+          "start": "2017-11-13T14:39:31Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.50.97.57:55481 - 10.50.96.20:5432 TCP",
+          "id": "6vds_sLxXqE",
+          "locality": "private",
+          "sequence_num": 207392627
+        },
+        "netflow": {
+          "destinationIPv4Address": "10.50.96.20",
+          "destinationTransportPort": 5432,
+          "egressInterface": 24,
+          "firewallEvent": 1,
+          "flowDirection": 0,
+          "flowEndSysUpTime": 1803238112,
+          "flowId": 34078638,
+          "flowStartSysUpTime": 1803238112,
+          "icmpTypeCodeIPv4": 0,
+          "ingressInterface": 23,
+          "ipClassOfService": 0,
+          "octetDeltaCount": 78,
+          "packetDeltaCount": 1,
+          "privateEnterpriseNumber": 25461,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.50.97.57",
+          "sourceTransportPort": 55481,
+          "tcpControlBits": 2,
+          "template_id": 257
+        },
+        "network": {
+          "direction": "inbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN"
+            ]
+          },
+          "total": {
+            "bytes": 78,
+            "packets": 1
+          }
+        },
+        "source": {
+          "ip": "10.50.97.57",
+          "locality": "private",
+          "port": 55481
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "10.50.97.57",
+          "locality": "private",
+          "port": 55481
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-11-13T14:39:31Z",
+          "duration": 0,
+          "end": "2017-11-13T14:39:31Z",
+          "start": "2017-11-13T14:39:31Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.50.97.57:55481 - 10.50.96.20:5432 TCP",
+          "id": "6vds_sLxXqE",
+          "locality": "private",
+          "sequence_num": 207392627
+        },
+        "netflow": {
+          "destinationIPv4Address": "10.50.97.57",
+          "destinationTransportPort": 55481,
+          "egressInterface": 23,
+          "firewallEvent": 1,
+          "flowDirection": 0,
+          "flowEndSysUpTime": 1803238112,
+          "flowId": 34078638,
+          "flowStartSysUpTime": 1803238112,
+          "icmpTypeCodeIPv4": 0,
+          "ingressInterface": 24,
+          "ipClassOfService": 0,
+          "octetDeltaCount": 78,
+          "packetDeltaCount": 1,
+          "privateEnterpriseNumber": 25461,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.50.96.20",
+          "sourceTransportPort": 5432,
+          "tcpControlBits": 18,
+          "template_id": 257
+        },
+        "network": {
+          "direction": "inbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 78,
+            "packets": 1
+          }
+        },
+        "source": {
+          "ip": "10.50.96.20",
+          "locality": "private",
+          "port": 5432
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "10.48.208.209",
+          "locality": "private",
+          "port": 60068
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-11-13T14:39:31Z",
+          "duration": 0,
+          "end": "2017-11-13T14:39:31Z",
+          "start": "2017-11-13T14:39:31Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.48.208.209:60068 - 34.234.173.147:443 TCP",
+          "id": "v3XVGdLaIe4",
+          "locality": "public",
+          "sequence_num": 207392627
+        },
+        "netflow": {
+          "destinationIPv4Address": "10.48.208.209",
+          "destinationTransportPort": 60068,
+          "egressInterface": 24,
+          "firewallEvent": 1,
+          "flowDirection": 0,
+          "flowEndSysUpTime": 1803238112,
+          "flowId": 280972,
+          "flowStartSysUpTime": 1803238112,
+          "icmpTypeCodeIPv4": 0,
+          "ingressInterface": 23,
+          "ipClassOfService": 0,
+          "octetDeltaCount": 70,
+          "packetDeltaCount": 1,
+          "privateEnterpriseNumber": 25461,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "34.234.173.147",
+          "sourceTransportPort": 443,
+          "tcpControlBits": 18,
+          "template_id": 257
+        },
+        "network": {
+          "direction": "inbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 70,
+            "packets": 1
+          }
+        },
+        "source": {
+          "ip": "34.234.173.147",
+          "locality": "public",
+          "port": 443
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "65.52.108.254",
+          "locality": "public",
+          "port": 443
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-11-13T14:39:31Z",
+          "duration": 0,
+          "end": "2017-11-13T14:39:31Z",
+          "start": "2017-11-13T14:39:31Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.130.167.43:62196 - 65.52.108.254:443 TCP",
+          "id": "aenMB9Z5Tzc",
+          "locality": "public",
+          "sequence_num": 207392627
+        },
+        "netflow": {
+          "destinationIPv4Address": "65.52.108.254",
+          "destinationTransportPort": 443,
+          "egressInterface": 23,
+          "firewallEvent": 1,
+          "flowDirection": 0,
+          "flowEndSysUpTime": 1803238112,
+          "flowId": 35036619,
+          "flowStartSysUpTime": 1803238112,
+          "icmpTypeCodeIPv4": 0,
+          "ingressInterface": 24,
+          "ipClassOfService": 0,
+          "octetDeltaCount": 70,
+          "packetDeltaCount": 1,
+          "privateEnterpriseNumber": 25461,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.130.167.43",
+          "sourceTransportPort": 62196,
+          "tcpControlBits": 2,
+          "template_id": 257
+        },
+        "network": {
+          "direction": "inbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "SYN"
+            ]
+          },
+          "total": {
+            "bytes": 70,
+            "packets": 1
+          }
+        },
+        "source": {
+          "ip": "10.130.167.43",
+          "locality": "private",
+          "port": 62196
+        }
+      },
+      "Private": null
+    }
+  ]
+}

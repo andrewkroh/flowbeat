@@ -2,39 +2,174 @@
   title: flowbeat
   description:
   fields:
-    - name: flow.duration
-      type: long
-      format: duration
-      input_format: nanoseconds
-      description: Duration of the flow up to this flow record.
-    - name: flow.bytes
-      type: long
-      format: bytes
-      description: >
-        The number of bytes since the previous report (if any) in incoming
-        packets for this Flow at the Observation Point. The number of bytes
-        includes IP header(s) and IP payload. 
-    - name: flow.packets
-      type: long
-      description: >
-        The number of incoming packets since the previous report (if any)
-        for this Flow at the Observation Point. 
     - name: flow.id
       type: keyword
-    - name: flow.start_time
-      type: date
-      description: Time the flow started.
-    - name: flow.last_time
-      type: date
-      description: Time of the last packet in this flow
+
+    - name: flow.five_tuple
+      type: keyword
+
+    - name: flow.locality
+      type: keyword
+      description: >
+        Specifies if the flow includes any public addresses. The value will be
+        either public or private.
+
+    - name: source.locality
+      type: keyword
+      description: >
+        Specifies if the source IP is public or private.
+
+    - name: destination.locality
+      type: keyword
+      description: >
+        Specifies if the destination IP is public or private.
+
     - name: flow.sequence_num
       type: long
       description: Sequence number of the flow report.
+
+    - name: network.tcp.flags
+      type: keyword
+      description: List of TCP flags observed in the flow.
+
+    - name: event.start
+      type: date
+      description: Time of first flow packet.
+
+    - name: event.end
+      type: date
+      description: Time of last flow packet.
 
 - key: ecs
   title: Elastic Common Schema
   description: Common fields from the Elastic Common Schema (ECS).
   fields:
+    - name: event
+      title: Event
+      type: group
+      description: >
+        The event fields are used for context information about the data itself.
+      fields:
+        - name: id
+          type: keyword
+          description: >
+            Unique ID to describe the event.
+          example: 8a4f500d
+          phase: 1
+
+        - name: category
+          type: keyword
+          description: >
+            Event category.
+            This can be a user defined category.
+          example: metrics
+
+        - name: type
+          type: keyword
+          description: >
+            A type given to this kind of event which can be used for grouping.
+            This is normally defined by the user.
+          example: nginx-stats-metrics
+
+        - name: action
+          type: keyword
+          description: >
+            The action captured by the event. The type of action will vary from
+            system to system but is likely to include actions by security services,
+            such as blocking or quarantining; as well as more generic actions such
+            as login events, file i/o or proxy forwarding events.
+            The value is normally defined by the user.
+          example: reject
+
+        - name: module
+          type: keyword
+          description: >
+            Name of the module this data is coming from.
+            This information is coming from the modules used in Beats or Logstash.
+          example: mysql
+
+        - name: dataset
+          type: keyword
+          description: >
+            Name of the dataset.
+            The concept of a `dataset` (fileset / metricset) is used in Beats as a
+            subset of modules. It contains the information which is currently
+            stored in metricset.name and metricset.module or fileset.name.
+          example: stats
+
+        - name: severity
+          type: long
+          phase: 1
+          example: "7"
+          description: >
+            Severity describes the severity of the event. What the different
+            severity values mean can very different between use cases. It's up to
+            the implementer to make sure severities are consistent across events.
+
+        - name: raw
+          type: keyword
+          phase: 1
+          # Unfortunately this example is not shown correctly yet as | do not work
+          # in tables well
+          # Is &#124; is the representation of | it works except for cases where
+          # used ticks.
+          example: "Sep 19 08:26:10 host CEF:0&#124;Security&#124;
+                threatmanager&#124;1.0&#124;100&#124;
+                worm successfully stopped&#124;10&#124;src=10.0.0.1
+                dst=2.1.2.2spt=1232"
+          description: >
+            Raw text message of entire event. Used to demonstrate log integrity.
+            This field is not indexed and doc_values are disabled. It cannot be
+            searched, but it can be retrieved from `_source`.
+          index: false
+          doc_values: false
+
+        - name: hash
+          type: keyword
+          phase: 1
+          example: "123456789012345678901234567890ABCD"
+          description: >
+            Hash (perhaps logstash fingerprint) of raw field to be able to
+            demonstrate log integrity.
+
+        - name: version
+          type: keyword
+          required: true
+          description: >
+            The version field contains the version an event for ECS adheres to.
+            This field should be provided as part of each event to make it possible
+            to detect to which ECS version an event belongs.
+            event.version is a required field and must exist in all events. It
+            describes which ECS version the event adheres to.
+            The current version is 0.1.0.
+          example: 0.1.0
+
+        - name: duration
+          type: long
+          format: duration
+          input_format: nanoseconds
+          description: >
+            Duration of the event in nanoseconds.
+
+        - name: created
+          type: date
+          description: >
+            event.created contains the date when the event was created.
+            This timestamp is distinct from @timestamp in that @timestamp contains
+            the processed timestamp. For logs these two timestamps can be different
+            as the timestamp in the log line and when the event is read for example
+            by Filebeat are not identical. `@timestamp` must contain the timestamp
+            extracted from the log line, event.created when the log line is read.
+            The same could apply to package capturing where @timestamp contains the
+            timestamp extracted from the network package and event.created when the
+            event was created.
+            In case the two timestamps are identical, @timestamp should be used.
+
+        - name: risk_score
+          type: float
+          description: >
+            Risk score value of the event.
+
     - name: source
       title: Source
       type: group
@@ -98,11 +233,15 @@
               type: keyword
               description: >
                 City name.
-            - name: asn
+        - name: as
+          type: group
+          description: Autonomous System (AS) associated with the IP.
+          fields:
+            - name: num
               type: long
               description: >
                 Autonomous system number
-            - name: as_org
+            - name: org
               type: keyword
               description: >
                 Autonomous system organization name.
@@ -168,11 +307,15 @@
               type: keyword
               description: >
                 City name.
-            - name: asn
+        - name: as
+          type: group
+          description: Autonomous System (AS) associated with the IP.
+          fields:
+            - name: num
               type: long
               description: >
                 Autonomous system number
-            - name: as_org
+            - name: org
               type: keyword
               description: >
                 Autonomous system organization name.
@@ -181,8 +324,9 @@
       title: Device
       type: group
       description: >
-        Device fields are used to provide additional information about the device
-        that is the source of the information. This could be a firewall, network device, etc.
+        Device fields are used to provide additional information about the
+        device that is the source of the information. This could be a firewall,
+        network device, etc.
       fields:
         - name: mac
           type: keyword
@@ -234,6 +378,7 @@
           description: >
             Network protocol name.
           example: http
+
         - name: direction
           type: keyword
           description: >
@@ -253,6 +398,7 @@
         # Metrics
         - name: inbound.bytes
           type: long
+          format: bytes
           description: >
             Network inbound bytes.
           example: 184
@@ -263,6 +409,7 @@
           example: 12
         - name: outbound.bytes
           type: long
+          format: bytes
           description: >
             Network outbound bytes.
           example: 184
@@ -273,6 +420,7 @@
           example: 12
         - name: total.bytes
           type: long
+          format: bytes
           description: >
             Network total bytes. The sum of inbound.bytes + outbound.bytes.
           example: 368

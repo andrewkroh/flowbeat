@@ -3,6 +3,7 @@
 /_meta/kibana.generated
 /data
 /logs
+/docs/fields.asciidoc
 
 .DS_Store
 /flowbeat

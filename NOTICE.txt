@@ -1,2 +1,2 @@
 flowbeat
-Copyright 2017 Andrew Kroh
+Copyright 2018 Andrew Kroh

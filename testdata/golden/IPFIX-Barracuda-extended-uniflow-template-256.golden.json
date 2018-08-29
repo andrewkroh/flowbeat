@@ -1,0 +1,125 @@
+{
+  "test_name": "IPFIX Barracuda extended uniflow template 256",
+  "events": [
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "64.235.151.76",
+          "locality": "public",
+          "port": 443
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2018-04-18T08:16:47Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.236.5.4:51917 - 64.235.151.76:443 TCP",
+          "id": "kSpZ1WuBhjc",
+          "locality": "public",
+          "sequence_num": 506930
+        },
+        "netflow": {
+          "destinationIPv4Address": "64.235.151.76",
+          "destinationTransportPort": 443,
+          "egressInterface": 3689,
+          "firewallEvent": 1,
+          "flowDurationMilliseconds": 0,
+          "flowEndSysUpTime": 1957197969,
+          "flowStartSysUpTime": 1957197969,
+          "ingressInterface": 35233,
+          "octetDeltaCount": 0,
+          "octetTotalCount": 0,
+          "packetDeltaCount": 0,
+          "packetTotalCount": 0,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.236.5.4",
+          "sourceMacAddress": "00:50:56:b9:26:46",
+          "sourceTransportPort": 51917,
+          "template_id": 256
+        },
+        "network": {
+          "protocol": "TCP",
+          "total": {
+            "bytes": 0,
+            "packets": 0
+          }
+        },
+        "source": {
+          "ip": "10.236.5.4",
+          "locality": "private",
+          "mac": "00:50:56:b9:26:46",
+          "port": 51917
+        }
+      },
+      "Private": null
+    },
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "10.236.5.4",
+          "locality": "private",
+          "port": 51917
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2018-04-18T08:16:47Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.236.5.4:51917 - 64.235.151.76:443 TCP",
+          "id": "kSpZ1WuBhjc",
+          "locality": "public",
+          "sequence_num": 506930
+        },
+        "netflow": {
+          "destinationIPv4Address": "10.236.5.4",
+          "destinationTransportPort": 51917,
+          "egressInterface": 35233,
+          "firewallEvent": 1,
+          "flowDurationMilliseconds": 0,
+          "flowEndSysUpTime": 1957197969,
+          "flowStartSysUpTime": 1957197969,
+          "ingressInterface": 3689,
+          "octetDeltaCount": 0,
+          "octetTotalCount": 0,
+          "packetDeltaCount": 0,
+          "packetTotalCount": 0,
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "64.235.151.76",
+          "sourceMacAddress": "00:00:00:00:00:00",
+          "sourceTransportPort": 443,
+          "template_id": 256
+        },
+        "network": {
+          "protocol": "TCP",
+          "total": {
+            "bytes": 0,
+            "packets": 0
+          }
+        },
+        "source": {
+          "ip": "64.235.151.76",
+          "locality": "public",
+          "mac": "00:00:00:00:00:00",
+          "port": 443
+        }
+      },
+      "Private": null
+    }
+  ]
+}

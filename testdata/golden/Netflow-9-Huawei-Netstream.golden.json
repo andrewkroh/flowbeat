@@ -1,0 +1,80 @@
+{
+  "test_name": "Netflow 9 Huawei Netstream",
+  "events": [
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "10.111.112.204",
+          "locality": "private",
+          "port": 2598
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2018-01-29T03:02:20Z",
+          "duration": 327060000000,
+          "end": "2018-01-29T03:02:19Z",
+          "start": "2018-01-29T02:56:51.94Z",
+          "type": "NetFlow V9"
+        },
+        "flow": {
+          "five_tuple": "10.108.219.53:45587 - 10.111.112.204:2598 TCP",
+          "id": "d-FUjj8eKi8",
+          "locality": "private",
+          "sequence_num": 129954
+        },
+        "netflow": {
+          "bgpDestinationAsNumber": 0,
+          "bgpNextHopIPv4Address": "0.0.0.0",
+          "bgpSourceAsNumber": 0,
+          "destinationIPv4Address": "10.111.112.204",
+          "destinationIPv4PrefixLength": 25,
+          "destinationTransportPort": 2598,
+          "egressInterface": 31,
+          "flowDirection": 1,
+          "flowEndSysUpTime": 2678491632,
+          "flowStartSysUpTime": 2678164572,
+          "forwardingStatus": 0,
+          "ingressInterface": 8,
+          "ipClassOfService": 0,
+          "ipNextHopIPv4Address": "10.108.252.41",
+          "octetDeltaCount": 200,
+          "packetDeltaCount": 4,
+          "paddingOctets": "AAAA",
+          "postVlanId": 0,
+          "protocolIdentifier": 6,
+          "responderOctets": 0,
+          "sourceIPv4Address": "10.108.219.53",
+          "sourceIPv4PrefixLength": 24,
+          "sourceTransportPort": 45587,
+          "tcpControlBits": 24,
+          "template_id": 1315,
+          "vlanId": 0
+        },
+        "network": {
+          "direction": "outbound",
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "PSH",
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 200,
+            "packets": 4
+          }
+        },
+        "source": {
+          "ip": "10.108.219.53",
+          "locality": "private",
+          "port": 45587
+        }
+      },
+      "Private": null
+    }
+  ]
+}

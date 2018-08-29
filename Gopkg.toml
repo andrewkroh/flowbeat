@@ -1,0 +1,49 @@
+[[constraint]]
+  branch = "master"
+  name = "github.com/elastic/beats"
+
+# Beats is pinned to this branch.
+[[override]]
+  branch = "v1.17.0/enh/offset-replica-id"
+  name = "github.com/Shopify/sarama"
+  source = "github.com/urso/sarama"
+
+# Beats is pinned to this branch.
+[[override]]
+  branch = "17.05.x"
+  name = "github.com/docker/docker"
+  source = "github.com/exekias/moby"
+
+[[override]]
+  # Revision from vendor.conf in github.com/docker/docker.
+  name = "github.com/docker/distribution"
+  revision = "b38e5838b7b2f2ad48e06ec4b500011976080621"
+
+[[constraint]]
+  name = "github.com/OneOfOne/xxhash"
+  version = "1.2.2"
+
+[[constraint]]
+  name = "github.com/magefile/mage"
+  version = "2.1.0"
+
+[[constraint]]
+  name = "github.com/oschwald/geoip2-golang"
+  version = "1.2.1"
+
+[[constraint]]
+  name = "github.com/pkg/errors"
+  version = "0.8.0"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/tehmaze/netflow"
+
+[[constraint]]
+  name = "github.com/google/gopacket"
+  version = "v1.1.14"
+
+[prune]
+  unused-packages = true
+  go-tests = true
+  non-go = true

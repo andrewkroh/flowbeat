@@ -1,0 +1,77 @@
+{
+  "test_name": "IPFIX vIPtela with VPN id",
+  "events": [
+    {
+      "Timestamp": "2018-08-26T20:30:41.013545202Z",
+      "Meta": null,
+      "Fields": {
+        "destination": {
+          "ip": "172.16.21.27",
+          "locality": "private",
+          "port": 443
+        },
+        "device": {
+          "ip": "192.0.2.1"
+        },
+        "event": {
+          "created": "2017-11-21T14:32:15Z",
+          "duration": 0,
+          "end": "0001-01-01T00:00:00Z",
+          "start": "0001-01-01T00:00:00Z",
+          "type": "IPFIX"
+        },
+        "flow": {
+          "five_tuple": "10.113.7.54:41717 - 172.16.21.27:443 TCP",
+          "id": "dO-Anbp9xpw",
+          "locality": "private",
+          "sequence_num": 12226053
+        },
+        "netflow": {
+          "destinationIPv4Address": "172.16.21.27",
+          "destinationTransportPort": 443,
+          "egressInterface": 3,
+          "flowEndReason": 3,
+          "flowEndSeconds": "2017-11-21T09:32:15-05:00",
+          "flowStartSeconds": "2017-11-21T09:32:15-05:00",
+          "icmpTypeCodeIPv4": 0,
+          "ingressInterface": 11,
+          "ipClassOfService": 48,
+          "ipDiffServCodePoint": 12,
+          "ipNextHopIPv4Address": "10.0.0.1",
+          "ipPrecedence": 1,
+          "maximumIpTotalLength": 277,
+          "minimumIpTotalLength": 70,
+          "observation_domain_id": 2887138561,
+          "octetDeltaCount": 775,
+          "octetTotalCount": 775,
+          "packetDeltaCount": 8,
+          "packetTotalCount": 8,
+          "paddingOctets": "AAAAAAAAAA==",
+          "protocolIdentifier": 6,
+          "sourceIPv4Address": "10.113.7.54",
+          "sourceTransportPort": 41717,
+          "tcpControlBits": 16,
+          "template_id": 257
+        },
+        "network": {
+          "protocol": "TCP",
+          "tcp": {
+            "flags": [
+              "ACK"
+            ]
+          },
+          "total": {
+            "bytes": 775,
+            "packets": 8
+          }
+        },
+        "source": {
+          "ip": "10.113.7.54",
+          "locality": "private",
+          "port": 41717
+        }
+      },
+      "Private": null
+    }
+  ]
+}

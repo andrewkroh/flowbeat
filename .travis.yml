@@ -5,6 +5,12 @@ go:
 
 go_import_path: github.com/andrewkroh/flowbeat
 
+addons:
+  apt:
+    update: true
+    packages:
+      - libpcap-dev
+
 script:
 - find . -name '*.go' | grep -v vendor | xargs gofmt -l | read && echo "Code differs from gofmt's style. Run 'gofmt -w .'" 1>&2 && exit 1 || true
 - go test ./...
