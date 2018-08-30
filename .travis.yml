@@ -1,4 +1,8 @@
-sudo: false
+# Packaging requires docker.
+sudo: required
+services:
+  - docker
+
 language: go
 go:
 - '1.10.x'
@@ -13,5 +17,16 @@ addons:
 
 script:
 - find . -name '*.go' | grep -v vendor | xargs gofmt -l | read && echo "Code differs from gofmt's style. Run 'gofmt -w .'" 1>&2 && exit 1 || true
-- go test ./...
+#- go test ./...
 - go build
+- if [ "$TRAVIS_TAG" != "" ]; then make release; fi
+
+deploy:
+  provider: releases
+  api_key:
+    secure: jdhGgn9QJ+WXRGuAr8jL1HijIDsRlhaX/WHxi/svU/eMxdMtl2auN/wj5Ng0Scpi6WQuvjJwJws2Xde2ahAvio6LlWBruCJh3nWygi/yxZnWJiSCHU94ZnKTVvMRBGa1v9BhX3H5yRsisBhZuH/xVjNB0/NjcDITZRwM0wUlxpZNSD8z2Q2Oqq1n/PJc35Difqkt4T6Tl0i7tutyO82Gvxo954neuqumeiJ6ittwD7xFKGE0IHca7IG1ltgZZNuHybuODIsDavexvhNEEt4fHs5ljfNeJ3Z3Mf9Okq0U5maNeUohde02qIG+/MgTV+erP40Aee1GFnUBk0k8rMhanBGtut1Xpb8Wt1Ke2ks3imO6h6FQkOYsVyJQAQErEgdLq+EJjDYRXDXOlV0Mf6Hhvg0X8RV6JjXhaV8oon6ThtFBAgUuQNCDkNzS2DhON8gnVs5omRnrGfGLUJP4RGH3rf80NA4vt0nv1qnOZSj9p86ATiMxztzm308wnXp0HigZQbarad6uFgv0mRoCxKxYvNY8JnYo4Yh0e8Cf5ZqhFXdoJhhr/CC7IB4juHEOaFgZseeM+zWJeL24os3rYAPLwijJS59WO5AqylSp2GrDDgE/VANW44VvZPzUH6rrGeD6QZCefz5UOsONzApbIw4zVxIEuMkZ6X5FQXBpdKm6AZA=
+  skip_cleanup: true
+  file: "$HOME/gopath/src/github.com/andrewkroh/flowbeat/build/distributions/*"
+  on:
+    repo: andrewkroh/flowbeat
+    tags: true

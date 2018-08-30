@@ -1,3 +1,10 @@
+required = [
+  # Used by make mage
+  "github.com/magefile/mage",
+  # Used by .elastic-beats/libbeat/scripts/cmd/global_fields/main.go
+  "github.com/elastic/beats/libbeat/generator/fields",
+]
+
 [[constraint]]
   branch = "master"
   name = "github.com/elastic/beats"

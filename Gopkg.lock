@@ -182,6 +182,7 @@
     "libbeat/conditions",
     "libbeat/dashboards",
     "libbeat/feature",
+    "libbeat/generator/fields",
     "libbeat/keystore",
     "libbeat/kibana",
     "libbeat/logp",
@@ -435,7 +436,12 @@
 [[projects]]
   name = "github.com/magefile/mage"
   packages = [
+    ".",
+    "build",
+    "mage",
     "mg",
+    "parse",
+    "parse/srcimporter",
     "sh",
     "target",
     "types"
@@ -694,6 +700,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "0fd1722936d54b80ed663c884bb6d5173e8aeab13513e034f0f82604d8b226d0"
+  inputs-digest = "72831dca1ff2fb5983b5a1ebff3e29dd3132a6f064cc99f8746df70187542261"
   solver-name = "gps-cdcl"
   solver-version = 1
