@@ -9,7 +9,7 @@ import (
 // Name of this beat
 var Name = "flowbeat"
 
-const Version = "0.2.0"
+const Version = "0.2.1"
 
 // RootCmd to handle beats cli
 var RootCmd = cmd.GenRootCmd(Name, Version, beater.New)
